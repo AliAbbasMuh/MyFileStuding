@@ -1,0 +1,172 @@
+Command Line
+
+
+تسمية
+title name
+
+تغيير اللون والخط
+color ارجاع الى الاصلي
+
+color 1
+color help
+
+    0 = Black       8 = Gray
+    1 = Blue        9 = Light Blue
+    2 = Green       A = Light Green
+    3 = Aqua        B = Light Aqua
+    4 = Red         C = Light Red
+    5 = Purple      D = Light Purple
+    6 = Yellow      E = Light Yellow
+    7 = White       F = Bright White
+
+معرفة الايبي
+ ipconfig
+ 
+الرجوع الى الخلف بالملفات
+cd ..
+الرجوع الى الروت
+cd \
+
+عمل ملف
+mkdir ali
+
+الذهاب الى الملف
+cd ali
+
+لفتح الملف
+explorer .
+فتح ملفات الحاسبة بصوره عامة
+explorer
+
+تفريغ الكومند .حذف
+clear
+cls
+
+عرض الملفات الموجوده في الملف
+ls
+dir
+
+انشاء مجموعة ملفات
+mkdir as dd gf jj
+
+انشاء ملف يحتوي على سبيس فراغ
+mkdir "as dd"
+
+انشاء ملف في الخلف بدون الرجوع اليه
+mkdir ..\kk 
+kk اسم الملف
+
+mkdir C:\oo
+
+تغيير اسم الملف
+win10
+rename as rr
+linux
+mv rr as
+
+نقل ملف
+win
+move as rr
+linux
+mv as ali
+
+ارجاع الملف خطوه الى الخلف
+mv ff ..\
+
+نسخ ملف مع الملفات الي بداخلة
+cp -r aa aa2
+
+حذف ملف
+rm -r aa2
+
+اذا كان المف بداخلة ملفات لايمكن الحذف
+rm -d aa2
+
+امر طباعة او اعرض
+echo "hi"
+
+انشاء ملف وبداخلة الكلمة البيت الاقواس
+echo "hiiiiii" > qq.txt
+
+اضافة نص الى السابق بدون حذف النص الاول
+echo "asfkkff" >> g1.txt
+
+عرض النصوص بداخل الملف
+cat g1.txt
+"asffffffffffffff"
+"asffffffffffffkkkkff"
+
+عرض النصوص بداخل الملفات المعيينه
+cat g1.txt g2.txt
+
+عرض النصوص بداخل جميع الملفات
+cat *
+
+انشاء ملف وداخلة نفس النصوص
+cat g12.txt > k.txt
+
+echo "list" > l.txt
+
+وضع جميع النصوص في ملف واحد
+cat g12.txt g12k.txt > final.txt
+
+البحث عن نص في ملف
+grep "ff" g12.txt
+بحث بصور عامة
+grep "ff" -r
+او في ملف اسمه ...
+grep "ff" -r ali
+
+بحث عن الفيلات التي بها الكلمة
+grep "ff" -r -l
+
+بحث في مسار
+grep "ff" C:\Users\..
+
+grep "ff" -r ali
+
+انشاء فايل وبداخلة ملف ونص
+C:\ali
+λ mkdir ss
+
+C:\ali
+λ echo "ggg" >>ss/hh.txt
+=============
+معرفة نوع الملف او الفايل
+file aa.txt
+
+عرض
+جلب البنية او الفروع
+tree /a
+
+فتح الكيبورد
+osk
+
+جلب كل الاشياء التي تعمب
+tasklist
+
+الاسم المستعار
+اختصار الاسم 
+
+alias
+alias list=ls
+
+فتح امرين 
+ipconfig && ping
+
+whoami
+desktop-8n9ncie\dragonsin
+
+systeminfo
+
+عمل بنج ووضعة في ملف
+ping 8.8.8.8 > pi.txt
+
+نسخ بدون عمل كوبي
+ipconfig | clip
+ثم لصق في ملف نصي
+
+موقع للبحث عن الكومندلاين
+https://ss64.com/
+
+=======================
