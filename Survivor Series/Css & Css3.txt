@@ -1,0 +1,587 @@
+﻿-------------------------------------------------
+دورة Css & Css3
+-------------------------------------------------
+
+<head>
+ <style>
+  </style>
+</head>
+يكون داخل head
+
+p{
+ color:red;
+ text-align:center;
+}
+
+h1{
+}
+
+
+-------------------------------------------------
+<p style="color:red">any</p> اضافة لون للكتابة
+<p style="background:green"> any</p> اضافة خلفية للكتابة
+-------------------------------------------------
+<head>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+يمكن من خلاله ربط  css ب  html
+-------------------------------------------------
+Div
+تعمل عمل p اي فقرة
+<div>any</div>
+-------------------------------------------------
+Class
+<div class="ss">any</div>
+.ss{
+}
+-------------------------------------------------
+Id
+<div id="ss">any</div>
+#ss{
+}
+-------------------------------------------------
+Span
+<span>any</span>
+Span{
+}
+نفس عمل p
+-------------------------------------------------
+*{
+}
+تطبيق على جميع العناصر
+-------------------------------------------------
+داخل الاقواس تكتب الاوامر مثل
+Color-  background  - border-padding-margin----------
+-------------------------------------------------
+#      -      .      -     span    -    *   -  body   -h1-p------------
+تكتب في ملف الاستايل مثل
+Style.css   ملف منفصل عن ملف html
+-------------------------------------------------
+الخطوط
+Font-family:tahoma;  شكل الخط
+or monospace  cursive  fantasy
+ 
+Font-size:10px; حجم الخط
+Font-size: x-small;
+Font-size: xx-smail;
+Font-size: medium;
+Font-size: large;
+Font-size: x-large;
+Font-size: xx-large;
+
+Font-style:italic; نوع الخط
+Normal   or   obliaque  
+Font-variant:small-caps; الحروف من صغير الكبير وبالعكس
+Normal    or    caps-small
+Font-weight:bold; تكبير وتصغير الخط
+Normal   or   bold  or 100
+لختصار الخطوات
+Font:italic bold 2px tahoma;
+-------------------------------------------------
+Direction 
+<body>
+Direction:rtl;  or   ltr;
+</body>   
+Rtl   تعني من اليمين   ltr  من اليسار
+-------------------------------------------------
+Text-align:right;
+right or left  or senter
+موقع النص او الكتابة
+-------------------------------------------------
+Text-decoration:none;
+ازالت الخطوط من اسفل الروابط
+
+text-decoration:line-through;
+الخط في منتصف الكلمة
+-------------------------------------------------
+Border        الاطارات
+Border- bottom:3px red solid;
+top or right or left or bottom
+ solid نوع البوردر طبيعي dotted  منقط   dashed  خطوط double دبل خط
+بصورة لجميع الاتجاهات نفس القياس
+Border:1px red dotted;
+حجم البورد لون البوردر شكل البوردر
+يمكن التحكم بعرض ولون البوردرمن خلال
+Width:14px;
+Color:red;
+
+border-style: dotted; يظهر منقط
+border-style: inset;
+border-style: groove;
+
+border-width:8px;
+
+border-color:red;
+
+border-radius:6px;  تصبح مائلة
+border-radius:30%;
+
+border-collapse:collapse; تكون الحدود مزدوجة
+-------------------------------------------------
+box-shadow:0 4px 8px 0; تظليل
+-------------------------------------------------
+*{
+Margin:0px;
+Padding:0px;
+}
+-------------------------------------------------
+Margin  
+Margin:auto;
+Left or right or top or bottom or auto
+
+Margin:20px;
+Margin-top:20px;
+ترك مسافة بين العصر و html
+اي من حدود الصفحة
+Margin: 1px 2px 3px 4px;
+1- top 2-right  3-left -4-bottom
+
+يمكن من خلالها التحكم بجميع الاتجاهات 
+-------------------------------------------------
+Padding   الابعاد 
+Padding:6px;
+Padding-top:1px;
+Left-right-bottom
+بعد اطار عن الكلام
+Padding:1px 2px 3px 4px;
+1 top-2 right 3left -4bottom
+يمكن من خلالها التحكم بجميع الاتجاهات
+-------------------------------------------------
+<img --------/>  any text
+
+vertical-align: text-top;
+يكون النص بالنسبة للصوره في الاعلى في محاذات الصورة
+-------------------------------------------------
+<word-wrap: break-word;
+يجعل النص ضمن حدود الاطار اي لايخرج منه
+-------------------------------------------------
+opacity  الشافية
+شفافية الصوره
+
+<img id="m" src="" />
+# m {
+ opacity:0.5;
+}
+-------------------------------------------------
+navbar
+
+<body>
+<nav>
+  <a href="#a">section</a>
+
+</nav>
+<section id="a"> <p> gjasgdja</p></section>
+</body>
+
+عند الضغط على section 
+ياخذك ال المقطع 
+
+nav{
+font-size:20px;
+color:red;
+}
+-------------------------------------------------
+overflow
+عبارة عن اسلايت 
+
+<p> gshgsha-----</p>
+
+p{
+ width:400px;
+ height:400px;
+ overflow: scroll;
+}
+
+overflow: hidden; هنا متوقف لايمكن النزول للسفل ترى جزء من الكتابة
+
+overflow: auto;
+-------------------------------------------------
+Float 
+ ازاحة عنصر الى جهة معينة
+Float:right;
+Left-center
+-------------------------------------------------
+Display
+Display:none;
+اخفاء العناصر لا تظهر
+Display:inline;
+وضع العناصر في سطر واحد
+
+Display:run-in;
+Display:block; قطعة واحدة
+Display:flex;
+Display:inline-block;
+
+-------------------------------------------------
+Hover
+عند التاشير على شي يتغير لون الكتابة او الخلفية
+مثل background          color    
+A:hover{
+}
+-------------------------------------------------
+A:link
+<a href="#">any</a>
+يمكن من خلالها التحكم بالروابط من حيث الون الخلفية وغيرها
+A:link{
+Color:red;
+}
+-------------------------------------------------
+A:visited{
+}
+يمكن من خلالها تغير لون الموقع الذي دخلت علية ليعلمك انك زرتة
+-------------------------------------------------
+A:active{
+}
+عند الضغط على الرابط او الكلام يتغير الون او الخلفية وغيرة
+-------------------------------------------------
+List-style:none;
+لازالة النقاط او الارقام من القوائم مثل
+Ul{
+List-style:none;
+}
+-------------------------------------------------
+Line-height
+يمكن من خلالها النزول بالسطرلمسافة معينة
+اي ارتفاع المسافة بين سطر وسطر اخر
+Line-height:30px;
+Line-height:100%;
+Line-height:normal;
+-------------------------------------------------
+الكروب يمكن من خلالها تجميع اكثر من عنصر والتحكم به من حيث الون الخلفية لون الخط
+P , h1 ,div {
+Background:red;
+Color:green;
+}
+-------------------------------------------------
+Focus
+تستخدم مع input  عند الضغط الى داخل المربع يتغير الون والخلفية
+Input:focus{
+Color:red;
+Background:green;
+}
+-------------------------------------------------
+Backround
+Backround-color:red; خلفية لون
+Backround-image:url("a.jpg");  خلفية صورة
+Backround-repeat:repeat-x;  تكرار الخلفية بالوضع الافقي
+Backround-repeat:repeat-y بالوضع العمودي
+Backround-repeat:no-repeat لمنع التكرار
+Backround-position:top; للتحكم نموقع الصور
+Left  right bottom
+يمكن اختصار الحالات 
+Backround:red arl("a.jpg")repeat bottom;
+background-attachment: fixed; يقوم بتثبيت الصورة مع النص
+
+background-attachment: local;
+background-attachment: scroll;
+
+-------------------------------------------------
+يمكن ملاحظة  position من خلال وضع border  للصفحة
+-------------------------------------------------
+Display:block;
+تجعل الخانة عبارة عن قطعة واحد او جميع الخائص قطعة واحدة مثل
+Li{border;1px solid red;
+background:red;
+width:4px; height:6px;
+}
+-------------------------------------------------
+Display:inline;
+تحول القائمة من الوضع العمودي الى الوضع الافقي
+Display:inline-block;
+في حالة تطبيق بلوك
+-------------------------------------------------
+Border-collapase:collapse;
+فائدة يطبق المسافات بين الجداول
+-------------------------------------------------
+#footer{
+Clear:both;
+}
+عادتا نضع اسفل الصفحة اي اخرشي ويكون وسط
+-------------------------------------------------
+الموقع  position
+
+any {
+position: fixed;
+يجعل العناصر ثابتة في مكانها 
+مثلا عند النزول لسفل الصفحة تنزل ايضا
+}
+
+position: relative;
+position: absolute;
+تبقى في الاعلى
+-------------------------------------------------
+P:first-line{
+Color:red;
+}
+يمكن من خلاله تطبيق لون على اول سطر
+-------------------------------------------------
+P:first-letter{
+Color:green;
+}
+تغيير لون اول حرف
+-------------------------------------------------
+P:after{
+Conent="any think";
+}
+يظهر بعد الكلام اي شي بدل any
+-------------------------------------------------
+P:after{
+Conent="url("a.jpg");
+}
+يظهر قبل الكلام
+-------------------------------------------------
+P هنا تعني فقرة يمكن استخدام  div  وغيره 
+في حال وجد class او id
+p.name class:first{}
+P#name id:first{}
+-------------------------------------------------
+خاصية            } { letter-spacing:2px;
+تجعل مسافات بين الحروف
+-------------------------------------------------
+خاصية        
+{  text-indent:100px;}
+تترك مسافة عند بداية اول سطر من الكلام 
+-------------------------------------------------
+ {White-space:pre; }
+عملها تقوم بيطبيق المسافات او الفراغات الموجودة في النصوص
+-------------------------------------------------
+{Word-spacing:3px;}
+تزيد المسافة بين الكلام
+-------------------------------------------------
+Outline
+تستخدم مع البوردر تكون عبارة عن اطار خارجي للبوردر اي
+Border:1px solid red;
+Outline:2px solid green;
+Outline-offset:12px; يعطي مسافة بينه وبين الاطار الخارجي
+-------------------------------------------------
+visibility: hidden; يختفي السكشن بالكامل
+section
+-------------------------------------------------
+Height
+تحديد الارتفاع تستخدم عادة مع البوردر
+{height:6px;}
+-------------------------------------------------
+Max-height:5px;  اقصى ارتفاع
+Min-height:4px; اقل ارتفاع
+-------------------------------------------------
+Width    العرض
+{width:7px;}
+{max or min-width:7px;}
+ ماكس اقصى عرض ميني اقل عرض
+-------------------------------------------------
+{text-none;}
+Capilalize  تحول اول حرف من كل سطر كبير
+Uppercase  الكل كبير      lowercase  الكل صغير
+-------------------------------------------------
+Cursor
+شكل الموس
+{cursor:text;}
+Or  move  or wait  or help  
+Text  طبيعي
+-------------------------------------------------
+{Valingn="top"}
+تستخدم مع الجداول
+<td valingn="bottom">any</td>
+يمكن من خلالها التحكم في موقع القوائم
+-------------------------------------------------
+ليقاف جزء من css
+او عمل ملاحظة
+/*   */
+
+or 
+
+//
+-------------------------------------------------
+Animation
+
+<section>
+<div id="a"></div>
+</section>
+
+#a{
+width:200px;
+height:200px;
+background:red;
+-webkit-animation:myfirst 6s;
+animation:myfirst 5s;
+}
+@-webkit-keyframes myfirst{
+ from{background:red;}
+ to{background:green;}
+}
+@keyframes myfirst{
+ from{background:red;}
+ to{background:green;}
+ }
+يتغير اللون من الاحمر الى الاخضر بالتريج
+
+-webkit-animation للحركة
+6s  الوقت بالثانية
+-------------------------------------------------
+<section id="aa">
+<div id="a"></div>
+</section>
+
+#aa{
+width:900px;
+height:400px;
+}
+
+#a{
+width:200px;
+height:200px;
+background:red;
+-webkit-animation:myfirst 6s;
+animation:myfirst 5s;
+position:relative;
+}
+@-webkit-keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+}
+@keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+ }
+
+صنع حركة مع تغيير الالوان
+-------------------------------------------------
+Gradient
+
+<section id="aa">
+<div id="a"></div>
+</section>
+
+<section id="">
+<div id="s"></div>
+</section>
+
+
+#aa{
+width:900px;
+height:400px;
+}
+
+#a{
+width:200px;
+height:200px;
+background:red;
+-webkit-animation:myfirst 6s;
+animation:myfirst 5s;
+position:relative;
+}
+@-webkit-keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+}
+@keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+ }
+
+#s{
+width:200px;
+height:200px;
+background:-webkit-linear-gradient(red,green);
+background:-o-linear-gradient(red,green);
+background:-moz-linear-gradient(red,green);
+background:linear-gradient(red,green);
+}
+
+عمل تدرج لوني
+ممكن وضع اكثر من للون
+-------------------------------------------------
+Transition
+
+<section id="aa">
+<div id="a"></div>
+</section>
+
+<section id="">
+<div id="s"></div>
+</section>
+
+<section id="">
+<div id="x"></div>
+</section>
+
+
+#aa{
+width:900px;
+height:400px;
+}
+
+#a{
+width:200px;
+height:200px;
+background:red;
+-webkit-animation:myfirst 6s;
+animation:myfirst 5s;
+position:relative;
+}
+@-webkit-keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+}
+@keyframes myfirst{
+0% {background:red;left:0px;top:0px;}
+25% {background:green;left:400px;top:0px;}
+50% {background:blue;left:300px;top:400px;}
+75% {background:yellow;left:0px;top:300px;}
+100% {background:black;left:0px;top:0px;}
+ }
+
+#s{
+width:200px;
+height:200px;
+background:-webkit-linear-gradient(red,green);
+background:-o-linear-gradient(red,green);
+background:-moz-linear-gradient(red,green);
+background:linear-gradient(red,green);
+}
+
+#x{
+width:200px;
+height:200px;
+background:red;
+-webkit-transtion: width 2s;
+transtion: width 2s;
+}
+#x:hover{
+width:200px;
+}
+عند التاشير على السكشن يزداد ويتغير اللون
+-------------------------------------------------
+screen
+
+<section id="xx">
+</section>
+
+body{
+
+background-color:black;
+}
+
+@media only screen and (max-width:400px){
+ body{
+ background-color:red;
+  }
+} 
+عند تصغير المتصفح يتغير اللون
+-------------------------------------------------
+-------------------------------------------------

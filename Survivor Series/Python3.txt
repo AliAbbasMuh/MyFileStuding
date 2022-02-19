@@ -1,0 +1,604 @@
+﻿Python programming 3
+
+useing Pycharm
+
+On firest 
+install 
+Python
+Java se
+Pycharm
+====================
+
+class Person:
+    def s (self):
+        print("aa")
+a = Person()
+a.s()
+
+===
+class Person:
+    def __init__(self,name="abbas"):
+        self.name = name
+    def personName(self):
+        print("person name is : {}".format(self.name))
+
+ali = Person("ali")
+ali.personName()
+==============
+class Person:
+    def __init__(self,name="abbas"):
+        self.name = name
+    def personName(self):
+        print("person name is : {}".format(self.name))
+
+
+ali = Person("ali")
+ali.personName()
+ali.name ="mohammed"
+ali.personName()
+====================
+class Person:
+    def __init__(self,name="abbas"):
+        self.name = name
+    def personName(self):
+        print("person name is : {}".format(self.name))
+
+ali = Person("ali")
+ali.personName()
+ali.name ="mohammed"
+ali.personName()
+print(ali.name)
+======================
+class Person:
+    def __init__(self,name="abbas"):
+        self.name = name
+    def personName(self):
+        print("person name is : {}".format(self.name))
+
+ali = Person("ali")
+ali.personName()
+ali.name ="mohammed"
+ali.personName()
+print(ali.name)
+us = Person()
+us.personName()
+=======================
+class Person:
+    def __init__(self,name="abbas",lname="moh"):
+        self.name = name
+        self.lname= lname
+    def personfullName(self):
+        print("person name is : {} and last name is {}"
+# or  print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+#ali = Person("ali","ahmed")
+#ali.personfullName()
+#ali.name ="mohammed"
+#ali.personfullName()
+#print(ali.name)
+us = Person()   # or us = Person("ali","abbas")class Person:
+    def __init__(self,name="abbas",lname="moh",age=25,salary=200):
+        self.name = name
+        self.lname= lname
+        self.age = age
+        self.salary =salary
+
+    def personfullinfo(self):
+        print("person full information is : {} {} {} {}"
+              .format(self.name, self.lname,self.age,self.salary))
+    def personfullName(self):
+        print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+#ali = Person("ali","ahmed")
+#ali.personfullName()
+#ali.name ="mohammed"
+#ali.personfullName()
+#print(ali.name)
+us = Person("ali","abbas")  #or  us = Person("ali","abbas",22,3000)
+us.firstName()
+us.personlname()
+us.personfullName()
+us.personfullinfo()
+==========================
+class Person:
+    def __init__(self,name="abbas",lname="moh",age=0,salary=0):
+        self.name = name
+        self.lname= lname
+        self.age = age
+        self.salary =salary
+
+    def personfullinfo(self):
+        print("person full information is : {} {} {} {}"
+              .format(self.name, self.lname,self.age,self.salary))
+    def personfullName(self):
+        print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+#ali = Person("ali","ahmed")
+#ali.personfullName()
+#ali.name ="mohammed"
+#ali.personfullName()
+#print(ali.name)
+us = Person("ali","abbas",22,3000)
+us.firstName()
+us.personlname()
+us.personfullName()
+
+us.salary=200        #ممكن الوصل الى وتغيره
+us.personfullinfo()  # ولاكن خطر على التطبيق
+us.firstName()
+us.personlname()
+us.personfullName()
+=============================
+#  OOP Encapsulation
+# فائدة @ تعزل المتغيرلت
+# يمكن تغيير المتغيرات عن طريق ال function
+# function change var is set & get
+# هنا لا نحتاج الى معرفة المتغييرات
+# set تحتاج الى اركيومنت // get  لا تحتاج
+
+class Person:
+    def __init__(self,name="abbas",lname="moh",age=0,salary=0):
+        self.name = name
+        self.lname= lname
+        self.age = age
+        self.salary =salary
+    def setName(self,name):   # تغيير القيمة
+        self.name = name
+    def getName(self):        # نتيجة التغيير 
+        return self.name      # ارجاع القيمة
+
+    def personfullinfo(self):
+        print("person full information is : {} {} {} {}"
+              .format(self.name, self.lname,self.age,self.salary))
+    def personfullName(self):
+        print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+#ali = Person("ali","ahmed")
+#ali.personfullName()
+#ali.name ="mohammed"
+#ali.personfullName()
+#print(ali.name)
+
+us = Person("ali","abbas",22,3000)
+#us.firstName()
+#us.personlname()
+#us.personfullName()
+
+#us.salary=200
+#us.personfullinfo()
+
+us.setName("AA")
+print(us.getName())
+======================
+class Person:
+    def __init__(self,name="abbas",lname="moh",age=0,salary=0):
+        self.name = name
+        self.lname= lname
+        self.age = age
+        self.salary =salary
+    def setName(self,name):
+        self.name = name
+    def getName(self):
+        return self.name
+
+    def personfullinfo(self):
+        print("person full information is : {} {} {} {}"
+              .format(self.name, self.lname,self.age,self.salary))
+    def personfullName(self):
+        print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+#ali = Person("ali","ahmed")
+#ali.personfullName()
+#ali.name ="mohammed"
+#ali.personfullName()
+#print(ali.name)
+
+us = Person("ali","abbas",22,3000)
+#us.firstName()
+us.personlname()
+us.personfullName()
+
+#us.salary=200
+#us.personfullinfo()
+
+us.setName("AA")
+print(us.getName())
+============================
+class Person:
+    def __init__(self,name="abbas",lname="moh",age=0,salary=0):
+        self.name = name
+        self.lname= lname
+        self.age = age
+        self.salary =salary
+    def setName(self,name):
+        self.name = name
+    def getName(self):
+        return self.name
+
+    def personfullinfo(self):
+        print("person full information is : {} {} {} {}"
+              .format(self.name, self.lname,self.age,self.salary))
+    def personfullName(self):
+        print("person full name is : {} {}"
+              .format(self.name,self.lname))
+    def firstName(self):
+        print("person first name is : {}".format(self.name))
+    def personlname(self):
+        print("person last name is : {}".format(self.lname))
+
+us = Person()          # or us = Person(lname="sam")  or us = Person(lname="sam",salary=100)
+                       # & عند اضافة شي غير معرف لايعمل
+
+us.personfullinfo()
+
+us.setName("AA")
+print(us.getName())
+=============================
+class Person:
+    def __init__(self,**kwargs):  # تسخدم لاختصار جميع المتغيرات
+        self.infos = kwargs
+
+    def setName(self,lname):
+        self.infos['lname'] = lname
+    def getName(self):
+        return self.infos.get('lname',"no name")
+
+us = Person(lname="sam")          # us = Person(lnamess="sam")  //sol no name
+print(us.getName())
+
+us.setName("AA")
+print(us.getName())
+=============================
+class Person:
+    def __init__(self,**kwargs):
+        self.infos = kwargs
+
+    def setName(self,lname):    #  *
+        self.infos['lname'] = lname
+    def getName(self):
+        return self.infos.get('lname',"no name")
+
+    def setsalary(self,salary):
+        self.infos['salary'] = salary
+    def getsalary(self):
+        return self.infos.get('salary',"no salary")
+us = Person(lname="sam",salary=100)   #  *
+
+print(us.getName())    #  * يصنع set & get  وجملة الطباعة حسب عدد المتغيرات داخل us = Person()
+
+us.setName("AA")
+print(us.getName())
+
+print(us.getsalary())
+
+us.setName("AA")
+print(us.getName())
+================================
+OOP Inheitance
+
+class Person:
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+class ali:
+    def aliname(self):
+        print("ali abbas")
+    def personage(self):
+        print("age is 25")
+al=ali()
+al.aliname()
+al.personage()
+=================================
+class Person:
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+class ali(Person):            # استدعاء الوراثة ali from person
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+al=ali()
+al.personname()  #هذا ال function .ليس من ali . بل يرثها من person
+al.personage()      # يمكن التعديل عليها 
+al.personEyecolor()
+==================================
+class Person:
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        pass                 #ممكن عمل pass
+    def personage(self):     #@ التغيير في كلاس علي
+        pass
+class ali(Person):
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+al=ali()
+al.personname()
+al.personage()
+al.personEyecolor()
+============================
+class Person:
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        pass
+    def personage(self):
+        pass
+class ali(Person):
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+class moh(Person):   #ممكن عمل اكلاس اخر يرث من بيرسون
+    def name(self):
+        super().personname() #بدل كتابة الفاكشن وجملة الطباعة يرث الفاكشن مباشر من بيرسون
+          #print("this is person moh") #ممكن اضافة جملة الطباعة ايضا
+mo=moh()
+mo.name()
+
+al=ali()
+al.personname()
+al.personage()
+al.personEyecolor()
+============================
+class Person:
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        pass
+    def personage(self):
+        pass
+class ali(Person):
+    def personname(self):
+        print("this is person name")
+    def personEyecolor(self):
+        print("Eye is green")
+    def personage(self):
+        print("age is 25")
+class moh(Person):
+    def name(self):
+        super().personname()
+        print("this is person moh")
+class ahmed(Person):    #ممكن عمل كلاس pass
+    pass
+ah = ahmed()  
+ah.personname()  # هنا يظهر الاسم
+ah.personEyecolor()  # هنا لا يظهر اللون العين لانها pass في كلاس البيرسون
+
+mo=moh()
+mo.name()
+
+al=ali()
+al.personname()
+al.personage()
+al.personEyecolor()
+==========================
+Polymorphism تعدد الاشكال
+
+class mohammed:
+     def readBooks(self):
+         print("mohammed is reading books")
+     def writeArticle(self):
+         print("mohammed is writing article")
+     def watchMovies(self):
+         print("mohammed is watching Movies")
+     def listenSong(self):
+         print("mohammed is listenning to Song")
+class ahmed:
+    def watchMovies(self):
+         print("ahmed is watching Movies")
+    def listenSong(self):
+         print("ahmed is listenning to Song")
+    def readBooks(self):
+        print("ahmed is reading books")
+    def writeArticle(self):
+        print("ahmed is writing article")
+m=mohammed()  #object
+a=ahmed()     #object
+
+for i in (m,a):
+    i.listenSong() #هنا لم يتم التحديد لمن#
+    i.watchMovies()  #  لكل شخص حالة
+    i.writeArticle()  # محمد واحمد مشترك في الحالات التالية
+    i.readBooks()
+==============================
+class mohammed:
+     def readBooks(self):
+         print("mohammed is reading books")
+     def writeArticle(self):
+         print("mohammed is writing article")
+     def watchMovies(self):
+         print("mohammed is watching Movies")
+     def listenSong(self):
+         print("mohammed is listenning to Song")
+class ahmed:
+    def watchMovies(self):
+         print("ahmed is watching Movies")
+    def listenSong(self):
+         print("ahmed is listenning to Song")
+    def readBooks(self):
+        print("ahmed is reading books")
+    def writeArticle(self):
+        print("ahmed is writing article")
+m=mohammed()  #object
+a=ahmed()     #object
+                       # or طريقة ثانية
+def personStatus(abbas):  # نعرف فاكشن جديد
+    abbas.writeArticle()
+    abbas.watchMovies()
+def personStatus2(ali):
+    ali.listenSong()
+    ali.watchMovies()
+
+personStatus(a)  # منادات الشخص داخل الاقاواس عن طرق object
+personStatus2(m)
+========================================
+
+class mySq:
+     def __init__(self,value1=0,value2=0):
+         self.value1 =value1
+         self.value2 =value2
+     def result(self):
+         print(self.value1 * 4)
+
+class myRec:
+    def __init__(self, value1=0, value2=0):
+            self.value1 = value1
+            self.value2 = value2
+
+    def result(self):
+        print((self.value1 + self.value2) * 2)
+
+m=mySq(2) #object
+a=myRec(2,4)     #object
+
+def personStatus(ab):
+    ab.result()
+
+def personStatus2(ali):
+    ali.result()
+
+personStatus(m)
+personStatus2(a)
+==========================
+or 
+class mySq:
+     def __init__(self,value1=0,value2=0):
+         self.value1 =value1
+         self.value2 =value2
+     def result(self):
+         print(self.value1 * 4)
+
+class myRec:
+    def __init__(self, value1=0, value2=0):
+            self.value1 = value1
+            self.value2 = value2
+
+    def result(self):
+        print((self.value1 + self.value2) * 2)
+
+m=mySq(2) #object
+a=myRec(2,4)     #object
+
+for i in (m,a):      # use for
+    i.result()
+#def personStatus(ab):
+#    ab.result()
+#def personStatus2(ali):
+#    ali.result()
+#personStatus(m)
+#personStatus2(a)
+=======================
+Standard library  المكاتب القياسية
+
+import os # مكتبة os
+myDir = os.getcwd()  # getcwd ثابت
+print(myDir)  # يظهر المسار الذي نعمل عليه
+
+makeDir =os.mkdir("newFolder")  # انشاء ملف جديد
+
+=================
+import os  # استدعاء المكتبة  #  يمكن استدعاء اكثر من مكتية
+myDir = os.getcwd()
+print(myDir)
+
+#makeDir =os.mkdir("newFolder")  # stop
+
+renameFolder = os.rename("newFolder","ali") #تغييراسم الملف من newFolder to ali
+========================
+import urllib.request # تستخدم لل web
+
+myurl = urllib.request.urlopen("https://www.google.iq")
+
+print(myurl.read()) # فكرة يقراء html للموقع بالكامل
+====================================
+from ftplip import FTP
+
+ftp = FTP('172.0.0.1')   // FTP السيرفر او اذا يوجد على النت
+ftp.login(user="ali",password="aaa")
+ftp.cwd('/')
+====================================
+مكتبة خاصة بالشبكات
+
+import socket
+
+so = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+targ = input("what is your ip :")
+def portScan(port):
+  try: // جرب
+    con = so.connect((targ,port))
+    return True
+  except :
+    return False
+for i  in range(30):
+    if portScan(i):
+       print("Port number : {} is open :)".format(i))
+
+يطلب منك ادخال ip
+172.0.0.1
+=================
+Third party library
+
+مكتبة python-nmap
+تستخدم للختراق والتجارب
+--------------
+PyMySQL
+ربط البايثون مع mysql
+---------------
+
+import nmap
+nm = nmap.PortScanner()
+print(nm.scan('127.0.0.1','22'))
+-or-
+print(nm.scan('127.0.0.1','22','-sV'))
+----------------
+print(nm.scan('127.0.0.1','22-443'))
+يحسب البورات من 20 الى 443
+-----------------------
+print(nm['127.0.0.1'].hostname())
+يظهر الهوس نيم
+---------------------
+print(nm['127.0.0.1'].hostnames())
+كذلك
+---------------
+===================

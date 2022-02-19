@@ -1,0 +1,885 @@
+﻿------------------------------------------------------
+دورة HTML & HTML5
+------------------------------------------------------
+
+
+<!DOCTYPE>  # تعريف الملف على انه html5
+
+<html>
+<head>
+<title>عنوان الموقع</title> 
+<style> 
+		موقع الاستايل هنا 
+
+في حالة عدم استخدام style.css
+</style>       
+</head>
+<body>
+مكان العمل
+</body>
+</html>
+------------------------------------------------------
+------------------------------------------------------
+في حالة استخدام   style.css
+Body{}
+P ,div ,h1 {}
+.{}
+#{}
+*{}
+Span{}
+------------------------------------------------------
+<body style="color:red"> لون خط الكتابة
+<body style="background:green">      لون الخلفية 
+يمكن استخدام اي لون بدل الاحمر والاخضر . هناك طريقة اخرى لكتابة لون   #ffff515
+------------------------------------------------------
+------------------------------------------------------
+tags  
+
+<br/>        لفصل سطر عن سطر
+
+<hr/> وضع خط بين السطر الاول والثاني
+
+</p>فقرة (جملة كتابية) <p> تستخدم في الكتابة
+
+</strong>        اي شي<strong>    تضخيم الخط 
+
+</big>اي شي    <big>تكبير الخط
+
+<small> ffff </small>  تصغير الخط
+
+<em></em>   خط مائل
+
+<del></del>تستخدم للحظر او حذف عنصر (يكون خط في وسط الكلام)
+
+<ins></ins>نفس عمل del  لاكن الخط يكون في الاسفل
+
+<b> </b>           نفس عمل strong خط ثخين
+
+<i> </i>  نفس عمل em خط مائل
+
+<u> </u>  نفس عمل ins 
+
+<mark>AAA</mark> يصبح مضلل باللون الاصفر
+
+<u> BBB</u> يصبح خط تحت الكلمة
+
+<p><b>aaaa</b></p>   ممكن عمل اكثر من tag
+
+<strike> AAA </strike>  عمل خط في وسط الكلمة  نفس del
+
+<sup> AAA </sup>  يصعد الى الاعلى ويصغر قليل
+
+<sub> AA </sub> ينزل الى الاسفل
+
+------------------------------------------------------
+------------------------------------------------------
+Heading
+
+<h1> AA </h1>  كبير
+--
+--  اقل منه
+الى
+<h6> AA </h6>  صغير
+
+<h1>any</h1> تستخدم في العناوين h1  تكون كبير   
+<h2>any</h2>وسط
+اصغر<h3>any</h3>
+اي تصغر العناوين تنازليا
+------------------------------------------------------
+؛Paragraph
+
+<p> ndkshhaskj </p>
+------------------------------------------------------
+</sub> اي شي <sub> ( 2  ) فائدة sub تنزل الرقم او الحرف الى الاسفل مثل
+H2so4    الكود  <p> <p>h<sub>2</sub>so<sud>4</sub>
+عكس العميلة اي اس  مثل (5*2)3
+Cod   <p>(5*2)<sup>3</sup></p>
+عمل ملاحظات لا تظهر في الشاشة العرض <!--any think-->
+------------------------------------------------------
+------------------------------------------------------
+القوائم lists
+<ul>
+<li>any think</li>
+</ul>
+تكون في هذه الحالة على شكل نقاط
+------------------------------------------------------
+<ol>
+<li>any think</li>
+</ol>
+تكون في هذه الحاله على شكل ارقام
+------------------------------------------------------
+<dl>
+<dt> ali </dt>
+<dd> this is an employee </dd>
+</dl>
+تستخدم عادة في السؤال والجواب
+dt هو تعريف للعنصر الموجود  
+dd هو تعريف لهذا العنصر
+
+<ol type="">   1 or 2  or a or A or i or I ---
+يغير طريقة الترتيب حسب النوع
+
+<ol type="1" start="6">  هنا يبدا العد من الرقم 6 
+
+<ul type="circle">  دائرة مجوفة اي فارغة
+
+ممكن ايضا  square مربع
+none  بدون اي شي
+------------------------------------------------------
+------------------------------------------------------
+الروابط
+<a href="http">any</a> في حالت وجود موقع او رابط
+<a href="https://www.google.com">google</a>
+<a href="ali.html">any</a> في حالت وجود ملف مثلا داخل الحاسبة
+<a href="www" target="_blank">any</a> لفتح الموقع في صفحة جديدة
+<a href="www" target="_self">any</a> في نفس الصفحة
+<a href="www" target="_blank"title="any">any</a> عند التاشيرعلى الموقع يظهر كلام توضيحي
+
+<a href="ali.html">any
+<img src="a.jpg"/>
+</a>
+ايضا عند الضغط على الصوره يحول الى الرابط
+
+<a href="file/a.jpg">google</a>
+في حالة وجود الملف العمل او الصوره في ملف
+------------------------------------------------------
+------------------------------------------------------
+الصور  Image
+<img src="a.jpg"/>في حالة وجود ربط او ملف في الحاسبة
+
+<img src="http"/>في حالة وجود اربط على الانترنت
+
+<img src="file/a.jpg"/>    في وجود الصورة داخل ملف
+
+<img src="#" width="5px"height="5px"/>للتحكم بالطول والعرض الصورة
+
+<img src="#" alt="any/photo/sre"/> تستخدم alt في حالة حذف الصور او حدوث المشكلة 
+اما نضع صورة بديلة او اي كلمه او جملة
+
+لاستدعاء صورة من ملف
+<img src="name file/log.jpg">
+
+------------------------------------------------------
+------------------------------------------------------
+الجداول table
+
+<table>
+<tr><th>any</th></tr>
+<tr><td>any</td></tr>
+</table>
+
+tr يمثل الصف
+th يمثل الهدر
+td تحت الهد 
+
+<table>
+<tr><th>first name</th><th>last name</th><th>age</th></tr>
+<tr><td>ali</td><td>ab</td><td>25</td></tr>
+</table>
+
+<table border="1" align="center" width="100%">
+Border لوضع اطار للجدول .align لتحديد السنتر اما يمين يسار وسط.width عرض الاطار
+
+<table>
+<caption> employee </caption>  يكون مثلا الهدر   
+<tr><th>first name</th><th>last name</th><th>age</th></tr>
+<tr><td>ali</td><td>ab</td><td>25</td></tr>
+</table>
+
+
+<table cellpadding="30px"cellspacing="30">
+Cellpadding  للتحكم في المسافة بين الكلمة والاطار
+  Cellspasingللتحكم في المسافة بين حدود الجدول والاطار
+------------------------------------------------------
+<td rowspan="2"></td>
+
+يمكن من خلالها دمج خانتين من الجدول بوضع عمودي
+<td colspan="2"></td>
+يمكن من خلالها دمج خانين من الجدول بوضع افقي
+
+------------------------------------------------------
+<table>
+<thead>
+<tr><td></td></tr> 
+</thead>
+</table>
+عند استخدام thead تحول التيبل الى السطر الاول
+عند استخدام tfoot بلعكس الى السطر الاخير من الجدول
+عند استخدام  tbody تحول الجدول الى الوسط
+ملاحظة  tbody لا تعمل الا مع باقي الحالات 
+تستخدم هذه الحالات في الجداول الكبيرة
+------------------------------------------------------
+الفريمات
+ععد استخدام الفريم يحل محل 
+ body 
+<frameset rowe="20%,60%.20%> 
+<frame src="1.html" noresize="noresize"/> 
+<frame src="2.html" noresize="noresize"/>
+
+<frame src="3.html" noresize="noresize"/>
+
+</frameset>
+في هذة الحالة يقوم باستدعاء 3 صفحات
+1 2 3 اسماء الصفحات
+Rows  تكون الصفحات افقية cols تكون عمودية
+لمنع الحركة بين الصفحات نستخدم noresize="noresize"
+
+------------------------------------------------------
+------------------------------------------------------
+الكلمات الوصفية
+الكلمات الوصفية الاتضهر تكتب داخل head
+<head>
+<meta http-equiv="content-type" content="text/html;charest=utf-8"/>
+هذا الكود يتعرف علية السيرفر
+<meta name="keyword"content="#"/>
+يكتب بدل # وصف للموقع مثل برمجة.تصميم.تعليم
+<meta name="author"content="any name"/> 
+اي مثلا اسم الموقع
+<meta name="description"content="any"/> 
+وصف مثل الموقع خاص بالتصميم
+</head>
+------------------------------------------------------
+<spanstyle="color:red">any</span> فائدة الاسبان تحديد اي جزء من الكتابة لغرض تلوين النص
+------------------------------------------------------
+------------------------------------------------------
+tags 
+
+<marquee> welcome </marquee>  
+اظهار الاسم او الجملة او الصور تتحرك من اليمين الى اليسار
+
+<textarea> any </textarea>
+تستخدم لكتابة مقاله او وصف 
+
+<textarea cols="80" rows="30"> any </textarea>
+التحكم بالحجم الصفوف والاعمدة
+
+<p> ali say : <q> welcome </q> </p>
+output is    ali : " welcome" الشكل يظهر
+
+<p style="color:green">  welcome </p>
+وضع للون للجملة 
+
+<p style="background-color:green">  welcome </p>
+يغير للون خلفية الكتابة
+
+<p style="font-family:arial">  welcome </p>
+تغيير شكل الخط
+
+<p style="font-size:100px">  welcome </p>
+تغيير حجم الخط
+
+<p style="font-size:100px;font-family:arial">  welcome </p>
+يمكن وضع اكثر من فقرة وتفصل بينهما ;
+
+<p style="text-align:right">  welcome </p>
+تغيير اتجاه الكتابة اما left right center
+
+<div>
+الاشياء الدخالة تعتبر ضمن مجموعة واحد تابعة له
+</div>
+نفس عمل p
+
+<pre>
+  ali
+      ali 
+           ali
+ali
+</pre>
+لاظهار شكل معين
+يظهر كما في الشكل الاعلى
+
+<dfn>AAAAA</dfn>
+يظهر النص على شكل تعريف
+
+<code> abc </code>
+يظهر النص على شكل كود
+
+<samp> AAAA </samp> 
+يظهر بشكل سامب
+
+<kbd> AAAA </kbd>
+يظهر بشكل الكيبورد
+
+<var>  AAA </var>
+يظهر على شكل المتغير
+
+------------------------------------------------------
+------------------------------------------------------
+النماذج Form
+
+<form action="ارسال الى" method="get or post ">
+first name : <input type="text" name="اسم الادخال" />
+age : <input type="number" name="age" />
+</form>
+
+ممكن ايضا استخدام  label
+
+<form action="ارسال الى" method="get or post ">
+<label for="firstname">first name : </label>
+<input type="text" name="اسم الادخال" />
+<label for="firstname">age : </label>
+<input type="number" name="age" />
+</form>
+
+password : <input type="text" name="age" />
+عند كتابة الباسورد يكون مرئي
+password : <input type="password" name="age" />
+عند كتابة الباسورد يكون مشفر
+
+email : <input type="text" name="age" />
+هنا يقل اي كتابة
+email : <input type="email" name="age" />
+يجبرك على ادخال @
+
+<label for="gender">gender : </label>
+<input type="radio" name="gender" value="male" />male
+<input type="radio" name="gender" value="female" />female
+اختيار بين اثنين
+
+<label for="color">red : </label>
+<input type="checkbox" name="red" value="red" />Red
+<label for="color">green : </label>
+<input type="checkbox" name="Green" value="red" />Green
+يمكن اختيار واحد او الكل او عدم اختيار اي شي
+
+<input type="submit"  value="ارسال" />
+ارسال الفريم 
+
+age : <input type="number" name="age" size="40" />
+يمكن ايضا استخدام size
+
+age : <input type="number" name="age" placeholder="age" />
+وضع داخلة اسم يدل على المدخل
+
+<button name="button" type="button"> click me </button>
+تستخدم مع الجافا سكربت javascript
+
+<button name="button" type="button" onclick=""> click me </button>
+<script>
+function functionName(){
+ alert("ali ab ");
+}
+</scrpit>
+مثال
+عند الضغط على botton 
+يظهر ali ab
+
+<script type="text/javascript">
+للدلاله على انه javascript
+
+get يظهر المعلومات التي تم ارسالها في الهدر
+post لا يظهر 
+
+
+داخل body
+<form action="singup.php"method="get or post">
+بدل ال  sing.php يمكن وضع رابط صفحة معينة
+Get تعني يظهرالبيانات او يستقبل
+Post   لايظهرالبيانات او ارسال المعلومات
+<input type="text" value="name or any"/> <br/>
+اي كتابة اسم 
+<input type="password"/> <br/>
+اي رقم سري
+<input type="checkbox"/> <br/>
+مربع صغير عادة يوجد عند الاسم والرقم السري او الايميل 
+<input type="checkbox" checked="checked"/> <br/>
+ وضع صح داخل المربع الصغير
+<input type="radio''/> <br/>
+الراديو عبارة عن دائرة صغير تقريبا تشبه الجيك بوكس
+تفيد التعيين بين شياين مثل نعم او لا
+<input type="file"/> <br/>
+اي اختيار ملف من اي جهه حسب موقعه
+<input type="image" src="#"/> <br/>
+وضع صور # رابط الصورة
+<input type="submit"/> <br/>
+تقوم بالتحويل او الارسال
+يمكن تغيير اسم submit الى اي اسم 
+<input type="submit" value="name"/><br/> 
+<input type="reset"/> <br/>
+اي يرجع القيم الافترضية
+<input type="button"/> <br/>
+تشبه عمل submit   يمكن تغيير الاسم ايضا مثل الى value="sent"/>
+<input type="hidden"/> <br/>
+اي مخفي لا يظهر يستخدم عادة في معلومات التسجيل 
+</form>
+-----------
+<form action----------->
+<button> clieck here</button>
+</form>
+تستخدم للتحويل الى صفحة روابط مثلا
+-----------------------------------------
+<textarearows="conter" cols="any ex 13">
+</textarea>
+تفتح جدول او نافذة للكتابة او للتعليق الرو والكول يوضع عدد 
+---------------
+<form action------>
+<select>
+<option>any text</option>
+</select>
+</form>
+للتحديد او الاختيار كما في تحديد الدولة او النوع الفئة الى اخر
+<option selected="selected"> any </option>
+في هذه الحالة يعني الاختير الافتراضي 
+------------
+<form action------------------>
+<select>
+<optgroup lable="ar">
+<option>iq</option>
+<option> ss</option>
+</optgroup lable>
+<optgroup lable="Eng">
+<option>iq</option>
+<option> ss</option>
+</optgroup lable>
+فائدة الكروب تحديد مجموعات مثل الدول العربية والغربية
+---------------------
+<form action--------------->
+<fieldset>
+<legend> sing up </legend>
+Any think here <input type="text"value="name"/>
+</fieldset>
+</form>
+Fieldset  وضع جدار او اطار للوسم
+-----------
+<form action--------------->
+<fieldset>
+<legend> sing up </legend>
+<label for="ss">name</label>
+Any think here(name) <input type="text"value="name" id="ss"/>
+</fieldset>
+</form>
+في هذه الحالة عند الضغط على name  يحول الى داخل المربع المتابة
+-----------------
+<form action-------------->
+<input name="user" type="text" required="required" placeholder="any think"/>
+<input name="add" value="add" type="submit"/>
+</form>
+لكتابة اي شي وارساله او عمل اضافة
+---------------------------
+<form action-------------->
+<input name="user" type="mail" required="required" placeholder="any think"/>
+<input name="add" value="add" type="submit"/>
+</form>
+في هذه الحال يجبرك لادخال mail  فقط
+ايضا ارسال رابط
+----------------------------
+يستقبل رابط فقط
+<form action-------------->
+<input name="user" type="url" required="required" placeholder="any think"/>
+<input name="add" value="add" type="submit"/>
+</form>
+-------------
+لجعل الجمل في الوسط
+<center>
+Any ---
+</center>
+---------------
+Autofocus
+<form action--------------->
+User name :<input name="user" type="text"/>
+Password: <input name="user" type="text"/>
+</form>
+لادخال اسم والرقم السري
+------------------------------------------------------
+------------------------------------------------------
+للكتابة
+للغة العربية اي من اليمين dir="rtl'>  
+للغة الانكليزي من اليسار  dir="ltr">  
+------------------------------------------------------
+موقع لمعرفة الاخطاء في البرمجة 
+Validation.w3.org
+------------------------------------------------------
+------------------------------------------------------
+لتلوين خط اوسطر معين
+<font color="red">any</font>
+------------------------------------------------------
+
+------------------------------------------------------
+------------------------------------------------------
+لوضع فيديو
+
+<video conrols>
+<source src="a.mp4" type="video/mp4" />
+</video> 
+
+<source src="a.ogg" type="video/ogg" />
+
+<video src="video.mp4" height="400"' width="700"
+controls="controls" auto play="true" muted="" poster="a.jpg" loop="">
+
+</video>
+Controls  لاظهار واجهة التحكم بالفيديو
+Autoplay  تشغيل تلقائي للفيديو
+Muted ايقاف الصوت
+Poster  لوضع صورة قبل تشغيل الفيديو ولاكن لايعمل مع autoplay
+------------------------------------------------------
+------------------------------------------------------
+اضافة ملف صوتي
+
+<audio conrols>
+<source src="a.mp3" type="audio/mpeg" />
+</audio>
+
+<source src="a.ogg" type="audio/mpeg" />
+
+<audio src="a.mp3">
+</audio>
+Poster  and  muted  لا تستخدم في audio 
+الباقي نفس اعدادات الفيديو
+------------------------------------------------------
+موقع لوسوم html
+www.w3schools.com
+------------------------------------------------------
+<article> </article>
+تعريف المحتوى
+تكون في الوسط
+
+<aside> </aside>
+يحدد article
+يكون في جانب الصفحة
+------------------------------------------------------
+<progress></progress>
+يظهر شعار يشبه عملية التحميل او الانتظار
+
+<progress value="30" max="100"></progress>
+ يظهر على شكل يكول  30 % 
+
+<meter value="30" min="10" max="200"></meter>
+مشابة لل progress
+القيمة تتراوح بين 30 و 200
+
+------------------------------------------------------
+------------------------------------------------------
+Datalist
+
+<input type="text" id="Xmysearch" list="mysearch"/>
+<data id="mysearch">
+<option value="ali">
+<option value="ab">
+<option value="aa">
+</datalist>
+
+تملا ال text
+تساعد في عملية البحث
+يكون هنا مجموعة من الخيارات الجاهزه
+
+------------------------------------------------------
+------------------------------------------------------
+<header>
+  <p>hdsjhdsj</p>
+</header>
+header
+يكون في البداية فوق الكل
+
+Footer
+<footer>
+  <p>hdsjhdsj</p>
+</footer>
+يكون في الاسفل
+
+<address>AAAA</address>
+تغير من شكل الخط
+
+ممكن عمل style in header & footer
+------------------------------------------------------
+<p>babdkjbdkjbkA</P>
+
+<figure>
+  <img src="a.jpg" />
+</figure>
+يجعل النص كنما متعلق بالصور او العكس
+
+<p>babdkjbdkjbkA</P>
+<figure>
+  <img src="a.jpg" />
+<figcaption>
+this is photo  يجعل هذا النص ملتصق بالصورة
+</figcaption>
+</figure>
+
+
+ممكن وضع الفقرات الاعلى في article 
+للدلاله على انه موضوع واحد
+
+<article>
+<h3> this is my article </h3>
+<p>babdkjbdkjbkA</P>
+<figure>
+  <img src="a.jpg" />
+<figcaption>
+this is photo  يجعل هذا النص ملتصق بالصورة
+</figcaption>
+</figure>
+</article>
+
+<aside>
+يعطي معلومات عن المحتوى الرئيسي
+ويكون في جانب الصفحة
+<aside>
+<h3> this is my article 1</h3>
+<h3> this is my article 2</h3>
+</aside>
+
+Detaile & summary
+
+<details>
+ <summary>
+  the cell is 
+ <p>
+   bdkjadkjadbasjkdbaskjdbdk
+ </p>
+ </summary>
+</details>
+
+يظهر مثلث صغير قبل كلمة(the cell is) 
+عن الضغط عيلة يظهر النصركامل
+يساعد في النصوص الطويل 
+
+<summary> يمثل العنوان
+<details> يكون محتوى العنوان
+
+<section>
+يمكن وضع في داخلة مجموعة فقرات 
+ويمكن عمل استايل له
+يشبة article تقريبا
+</section>
+
+<p>
+<time> 12:00</time>pm
+</p>
+يستخدم عند اضافة الوقت الى النصوص
+
+<p>
+<time> 12:00</time>pm <br />
+<yime datatime="2017-11-4"> friday</time>pm <br/>
+</p>
+ممكن اضافة التاريخ ايضا
+
+------------------------------------------------------
+<canvas id="thiscanvas" width="100" height="100" style="background-color:red">
+</canvas>
+تفيد في الرسم وعادة ما يستخدم معها جافا سكربت
+رسم الكرافك
+
+<canvas id="thiscanvas" width="100" height="100"></canvas>
+<script>
+var canv =document.getElementById('thiscanvas');
+var canShape = canv.getContext("2d");
+canShape.fillStyle="red";
+canShape.fillRect(0,0,300,500)
+</script>
+يظهر على شكل مربع احمر
+------------------------------------------------------
+<canvas id="myLine" width="400" height="400" style="border:4px solid black"></canvas>
+<script>
+var canv = document.getElementById('myLine');
+var canShape = canv.getContext("2d");
+canShape.moveTo(0,0)
+canShape.lineTo(400,400) المحور x,y
+canShape.stroke(); تثخين الخط
+</script>
+خط مائل
+------------------------------------------------------
+<canvas id="myCircle" width="400" height="400" style="border:4px solid black"></canvas>
+<script>
+var canv = document.getElementById('myCircle');
+var canShape = canv.getContext("2d");
+canShape.beginPath()
+canShape.arc(100,70,50,0,2*Math.PI); المحور x,y (50 نصف القطر)
+canShape.stroke();
+</script>
+عمل دائرة
+------------------------------------------------------
+<body>
+<canvas id="myName" width="400" height="400" style="border:4px solid black"></canvas>
+<script>
+var canv = document.getElementById('myName');
+var canShape = canv.getContext("2d");
+canShape.font= "40px Arial ";
+canShape.fillText("ali abbas",100,100);
+</script>
+</body>
+اظهار نص كتابة
+canShape.strokeText("ali abbas",100,100);
+تكون الكتابة على شكل دائرة مجوفة
+------------------------------------------------------
+------------------------------------------------------
+SVG
+مشابة الى  canvas 
+يضا في الرسم
+
+<body>
+<svg width="400" hright="400">
+ <circle cx="60" cy="60" r="60" stroke="red" stroke-width="6" fill="yellow" />
+ </svg>
+</body>
+يظهر شكل دائرة
+------------------------------------------------------
+r="60"  القطر
+stroke="red" الحواف
+fill="yellow" للون الداخل
+------------------------------------------------------
+<rect width="60" height="60" stroke="red" stroke-width="6" fill="yellow" />
+مربع
+------------------------------------------------------
+<polygon points="90,12,39,196,188,75 12,75,158,196"
+style="fill:red;stroke:blue;stroke-width:7;fill-rule=nonzero" />
+يظهر شكل نجمه
+
+------------------------------------------------------
+------------------------------------------------------
+Drag & Drop  السحب والافلات
+
+<body>
+<div id="mydiv" style="width:500;height:300;padding:20px;margin:40px;
+border:6px solid black"
+ondrop="dropMe(event)" ondragover="myDrop(event)">
+</div>
+<br />
+<img id="drag" src="a.jpg" width="200px" draggable="true"
+ondragstart="dragFunction(event)"/>
+
+<script>
+function myDrop(e) {
+ e.preventDefault();
+ }
+ function dragFunction(e) {
+  e.dataTransfer.setData("text/html",e.target.id);
+  }
+function dropMe(e) {
+ e.preventDefault();
+ var data = e.dataTransfer.getData("text/html");
+ e.target.appendChild(document.getElementById(data));
+ }
+ </script>
+</body>
+هنا نسحب الصورة ووضعها داخل المربع وهو ال اليف div
+
+فاكشنات تابعة للجافا سكربت
+ondrop="dropMe(event)"  انسقطه
+ondragover"myDrop(event)" نسحبه
+
+------------------------------------------------------
+------------------------------------------------------
+Entities 
+مجموعة اشياء مثلا الاكبر والاصغر  الى اخر
+
+<h1> ali &nbsp; &nbsp; &nbsp; ab</h1>
+
+&nbsp; عبار عن فراغ واحد
+عند التكرار تزداد المسافة اي الفراغ بين الجملة او الكلمة
+
+<h1> ali &lt;  &gt; ab</h1>
+
+&lt; اصغر  <
+&gt;اكبر  >
+
+&amp;  and &
+
+&quot;  "
+&laquo ; <<
+&raquo; >>
+&iquest; علامة استفهام مقلوبة
+&pound;
+&yen;
+&copy;
+&micro;
+&reg;
+&euro;
+&cent;
+مجموعة من الرموز
+
+------------------------------------------------------
+------------------------------------------------------
+local storage
+خزن بيانات مؤقة
+ايضا باستخدام الجافاسكربت
+
+if (typeof(storage)!=="underfined") 
+يتاكد ها المتصفح يدعم localstorage
+
+localStorage.setItem("firstname","ali") 
+                      key         value
+
+<body>
+<div id="mydiv">
+</div>
+<script>
+if(typeof(storage)!=="underfined") {
+   localStorage.setItem("firstname","ali");
+} else {
+   document.getElementById('mydiv').innerHTML = "your broswer not support"
+}
+
+ </script>
+
+------------------------------------------------------
+inspect element اكلك ايمن على محتوى الصفحة واختيار
+الذهاب الى localstorage 
+ومراقبة الملفات المخزونة
+key  & value
+------------------------------------------------------
+يمكن صنع اكثر key & value
+
+<body>
+<div id="mydiv">
+</div>
+<script>
+if(typeof(storage)!=="underfined") {
+   localStorage.setItem("firstname","ali");
+     localStorage.setItem("firstname2","aa");
+	    localStorage.setItem("firstname3","ab");
+} else {
+   document.getElementById('mydiv').innerHTML = "your broswer not support"
+}
+
+ </script>
+------------------------------------------------------
+ممكن استرداد 
+عرضها في المتصفح
+
+<script>
+if(typeof(storage)!=="underfined") {
+   localStorage.setItem("firstname","ali");
+  document.getElementById('mydiv').innerHTML = localStorage.getItem("firstname") + "<br />";
+} else {
+   document.getElementById('mydiv').innerHTML = "your broswer not support"
+}
+
+ </script>
+يظهر ali
+------------------------------------------------------
+<div id="mydiv">
+</div>
+<div id="mydiv2">
+</div>
+<script>
+if(typeof(storage)!=="underfined") {
+   localStorage.setItem("firstname","ali");
+   localStorage.setItem("firstname2","ab");
+  document.getElementById('mydiv').innerHTML = localStorage.getItem("firstname") + "<br />";
+  document.getElementById('mydiv2').innerHTML = localStorage.getItem("firstname2");
+} else {
+   document.getElementById('mydiv').innerHTML = "your broswer not support"
+}
+
+ali
+ab
+------------------------------------------------------
+ممكن حذف ايضا
+if(typeof(storage)!=="underfined") {
+   localStorage.setItem("firstname","ali");
+   localStorage.removeItem("firstname2");
+  document.getElementById('mydiv').innerHTML = localStorage.getItem("firstname") + "<br />";
+  
+} else {
+   document.getElementById('mydiv').innerHTML = "your broswer not support"
+}
+
+------------------------------------------------------
+ليقاف جزء من html
+او عمل ملاحظة
+<!--  ملاحظة  -->
+
+------------------------------------------------------
+------------------------------------------------------

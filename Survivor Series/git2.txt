@@ -1,0 +1,687 @@
+
+
+repository مستودع
+branch فرع
+local repo 
+remote repo موقع الكيت او السيرفر
+commit (snapshot or checkpoint in your local repo) 
+clone (from local or remote) استنساخ
+push (upload local changes to remote)
+pull (you pull changes frome remote repo to your local
+pull request (tell other about your changes to pull it from local to remote)
+
+انشاء حساب 
+https://github.com/
+signup
+aardw@
+A66326632a
+AliAbbasMuh
+create
+--
+انشاء مستودع
+https://github.com/
+create repo
+mypro
+--
+https://docs.github.com/en
+--
+عمل نسخة من المستودع
+نسخ الرابط من موقع الكيت هب
+https://github.com/AliAbbasMuh/mypro.git
+فتح cmd or git bash here
+$ mkdie my-Github انشاء فولدر
+$ cd my-Github
+$ git clone https://github.com/AliAbbasMuh/mypro.git نسخ
+$ dir اعرض
+--
+$ cd mypro
+$ dir
+README.md
+--
+git status يظهر الحالة او الموجود
+يظهر باللون الاحمر الملف غير معروف
+git add in.html اضافة الملف الي اسمه
+git status
+يظهر الملف باللون الاخضر تم الاضافة
+-
+ارجع الملف احمر اي عد اضافة
+$ git reset head in.html.txt
+git status يرجع احمر
+
+اضافة جميع الملفات
+$ git add *
+اضافة ملف داخل الامتداد
+$ git add html/a.a.txt
+
+
+//git add ارسال الملفات الى
+staging area /local
+
+//ارسال الملفات الى git commit 
+repo area /local
+
+$ git commit -m "created in.html اي رسالة توضح الحالة"
+
+$ git branch
+يعرف جميع ال local
+الموجود عندك
+
+$ git remote -v
+امر جلب الريموت
+origin  https://github.com/AliAbbasMuh/mypro.git (fetch)
+origin  https://github.com/AliAbbasMuh/mypro.git (push)
+
+عمل push
+رفع المشروع/ الملفات
+$ git push origin main
+//git push (org) // name master or main ..etc
+// remot repo     //  pranch name (main)
+عند التعديل في ملف يتحول الى اللون الاحمر
+لذلك نعمل add 
+مره اخى للملف
+
+سحب التعديلات من الريموت ريبو
+pull تحميل الملف من السيرفر
+
+$ git pull origin
+
+===
+Git configurations
+
+جل جميع معلومات الكونفك
+git config -l
+$ git config -l --show-origin
+
+$ git help config
+يفتح موقع فيه جميع الاعدادات
+
+$ git config --global user.email
+يظهر الايميل
+
+اضافة الايميل
+$ git config --global user.email "aardwolf.xxvll@gmail.com"
+
+يظهر الاسم
+$ git config --global user.name
+
+اضافة الاسم
+$ git config --global user.name "Ali"
+
+حذف الاسم او الايميل
+$ git config --global user.name ""
+$ git config --global user.email ""
+ترك الفوارز فارغة
+or 
+$ git config --global --unset user.name
+
+التعديل عن طرق قائمة الايديت 
+$ git config --global --edit
+
+عمل ملف جديد
+$ touch cc.txt
+
+====
+عمل 
+public key
+الدخول الى الكيت عن طريق مفتاح
+جعل السيرفر يتعرف عليك بدون كتابة اليوزر نيم والباسورد
+
+$ ssh-keygen -t rsa -b 4096 -C "aardwolf.xxvll@gmail.com"
+يظهر
+Enter file in which to save the key (/c/Users/DragonSin/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase): الباسورد
+Enter same passphrase again: مكرر
+
+امر cat
+جلب محتوى اي فايل تدخله
+$ cat ~/.ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0BzzaA8TQ4Z+8YQjIN4+p+Ikgrjsx3sxUt7KhxBO8BS0DmO9Oic5cgcPsbLY9t/+kb5OwysQMg57c2lqMJSwXTaNCTr1/bbmmucLBITSjG+/eicg+4Ew+cT2bti4tiFmS00BxHAwFkh0yBNSzyiMUqguaQ39+lL0uTrvEjt9KBh3nopBfaLV4HfDijcYTlkAJP+4GR92YQo1/llE+j0nCOQCF0eTQoOKyblwLvr2CyGiaxhlcjGJw8m4H74masCfC8YBXCjoDmQOQGqrcfqoQ1UtuqWI5rd3Z/f6rkFDCS5QzEwlYBpTJt6PTE7Dyh8dJQlleUPH+DXSBvKXpqZJdguv3I3Uqju2ycIwgrDrt/X8HpOLtF16SAqIctS/Dqm6EUVkyBW0hXvflr6Rzf9Cg0D4CXJIzKZ/sXW5DXCYqa9rbmy221As8d2NVkj0hXz5M8EeGdmsedDHuYXiT5OkYMwwPKppGVOOrcyrCPIAvRn/wNZPoy4ZNBQUdnCq9aJhX2CDXOqvAFNPicFnd+1Ja42cn0VeY24shzdJMT8IsYBCFDJCdM+mapOWq57i15ltYPd5QIWgxFkekmeVIwW517zfXHy3E2l3Lbz1X96QyayN/EeVtm1xq8SYJrQysd6eI6lbq4++BkP279CU9GKpQ0r/kSof1ammktb1Rzo6CNQ== aardwolf.xxvll@gmail.com
+
+اعلاه محتوى الببلك كي
+ننسخ المحتوى
+نذهب الى الكيت هب
+الاعدادات
+https://github.com/settings/profile
+نختار
+ssh and gpg keys
+ssk keys>>new ssh key>>
+نلسق محتى الفايل المنسوخ
+
+في التايتل نكتب اي شي مثلا
+my home pc
+ثم add ssh key
+
+عمل test للتجربة
+في الكومند لاين
+$ ssh -T git@github.com
+
+===
+نشاء بروجيك من اللوكل ورفع على الكيت هب
+create repos from exsting project
+and up to git hub
+ المكان المراد الانشاء فيه
+$ cd \Users\DragonSin\Documents
+اسم الدايركت ريبو
+$ mkdir repos
+$ cd repos\
+
+يعمل تهيئة للمكان
+$ git init
+$ touch index.html انشاء ملف
+$ git status
+$ git add index.html
+$ git commit -m "created main file"
+
+
+نذهب موقع الكيت
+Create a new repository
+
+Repository name
+course
+creating
+نختار ssh
+بدل https
+من نفس الموقع الكيت
+https://github.com/AliAbbasMuh/course
+git@github.com:AliAbbasMuh/course.git
+
+…or create a new repository on the command line
+ننسخ الامر اسفل من الموقع 
+الامر الخاص بالريموت ريبو
+$ git remote add origin git@github.com:AliAbbasMuh/course.git
+ونلسق في اعلاه في الكومند لاين
+
+ننسخ الامر اسفل من الموقع
+$ git push -u origin main
+or $ git push -u origin master
+ونلسق في اعلاه في الكومند لاين
+
+يطلب بعدها الباسورد key pub
+
+نذهب بعدها للموقع للريبو
+وهو course
+نرى المحتوى
+=========
+pull request 
+# leaen 10
+==========
+Aliases
+الاسم المستعار
+اختصار اسم الايكون او النكات ...الخ
+مثال
+$ git config --global alias.st status
+>> after alias 
+st اختصار لل
+status
+
+$ git st
+
+2/
+$ git config --global alias.br branch
+$git br
+-
+$ git branch يجلب البرنج الخاص بك
+
+الاوارم التي تحتوى على فراغ سبيس
+$ git config --global alias.cm "commit -m"
+$ git cm "text"
+
+او يمكن التعديل من امر تعديل
+$ git config --global --edit
+ثم نضيف الاختصارات في قائمة alias
+يوجد مجموعة اختصارات على الكوكل aliases
+=======
+branching and merging
+الفروع
+عرض الفروع
+$ git branch
+* master
+
+انشاء فرع
+$ git branch name
+
+$ git branch
+* master
+ name
+
+الذهاب الى الفرع الذي تم انشاءه
+$ git checkout name
+
+الرجوع الفرع الرئيسي
+git checkout master
+
+حذف فرع معين
+$ git branch -d name
+
+حذف الفرع حتى اذا كان فية تعديلات
+$ git branch -D name
+
+طريقة ثانية
+انشاء فرع والذهاب الية
+$ git checkout -b name
+
+تغير اسم الفرع
+الدخول الى الفرع
+$ git branch -m newname
+
+-
+تطبيق
+$ touch a.html
+$ git add *
+$ git commit -m "add a"
+
+الدخول الى الماستر
+$ git checkout master
+عمل ميرج مع الماستر
+$ git merge newname
+
+delet br
+$ git branch -d newname
+up load
+$ git push origin master
+
+$ git checkout -b name2
+انشاء ملف داخلة
+$ touch main.js
+$ git add *
+$ git commit -m "add main.js"
+نرجع للماستر
+$ git checkout master
+
+عند تجربة D
+يحف بشكل كامل
+$ git branch -D name2
+التجربة الثاني لا يحذف
+$ git branch -d name2
+
+error: The branch 'name2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D name2'.
+
+$ git checkout name2
+رفع التعديلات
+$ git push origin name2
+على name2 وليس
+الماستر
+,وبعد من الانتهاء من العمل يمكن حذفه
+الذهاب الى الموقع (الكيت هب)
+===============
+امر stash
+خبه او مخبه 
+وضع الحاجه في بوكس وتخبه
+
+$ touch as.html
+$ ls يظهر الملفات
+
+عمل ملف ووضع فيه جملة
+$ echo "hello" > dd.txt
+$ git status
+$ git add *
+هنا عمل stash
+تخزين الملفات على جانب وتكمل عملك بدون رفعها
+$ git stash
+عند status
+لاتظهر الملفات
+$ git status
+
+عمل ملفات جديد 
+ورفعها
+
+عند الرفع تظهر ملاحظة هناك ملفات على السرفر وهي الخاصه بالدرس السابق
+$ git push origin master
+
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:AliAbbasMuh/course.git'
+
+
+سحب الملفات
+$ git pull origin master
+اعادة الرفع
+$ git push origin master
+
+$ git stash list
+stash@{0}: WIP on name2: c7c437f add main.js
+
+ارجعاء الملفات الموجوده في الصندوق
+$ git stash pop
+
+$ git stash list
+لايظهر شي stash@{0} 
+===========
+mastering stash
+
+$ touch m.txt
+$ git add m.txt
+$ git stash
+
+$ touch m1.txt
+$ git add m1.txt
+$ git stash
+
+$ git stash list
+كل ملف يتم وصغه في صندق خاص به
+
+$ touch m2.txt
+$ git add m2.txt
+
+اضافه كومت لل stash
+$ git stash save "m2" 
+$ git stash list
+
+عمد عمل pop
+يجلب اخر صندوق تم عمله
+$ git stash pop
+
+$ git stash save "m2"
+$ git stash list
+stash@{0}: On master: m2
+stash@{1}: WIP on master: 48ccbdc add as dd
+stash@{2}: WIP on master: 48ccbdc add as dd
+
+$ git stash apply
+ياخذ التعديلات كلها ويترك الاستاش في مكانه
+يجلب اخر صندوق تم عمله ايضا
+
+$ git stash list
+كلها موجوده stash
+stash@{0}: On master: m2
+stash@{1}: WIP on master: 48ccbdc add as dd
+stash@{2}: WIP on master: 48ccbdc add as dd
+
+$ git commit -m "tx"
+$ git push origin master
+
+جلب صندق معين
+$ git stash pop stash@{2}
+داخل الاقواس رقم الصندوق
+$ git stash list
+stash@{0}: On master: m2
+stash@{1}: WIP on master: 48ccbdc add as dd
+
+حف اخر ستاش 
+$ git stash drop
+
+حف ستاش معين
+$ git stash drop stash@{1}
+Dropped stash@{1} (e3f3669b74ddb6f731ff209e31ac731a87ffa5f8)
+
+جلب الملفات الاتشاش الي بداخلة
+$ git stash show
+
+تحديد استاش
+$ git stash show stash@{1}
+
+dele stash all
+$ git stash clear
+===================
+restore and clean
+
+$ touch 22.txt
+$ git add 22.txt
+$ git status
+
+ارجاع الملف خطه الى الخلف
+$ git restore --staged 22.txt
+يرجع الى اللون الاحمر
+
+$ code 22.txt يفتح في محرر فيجول استوديو كود
+
+يرجع جميع الملفات
+$ git restore --staged *
+
+حذف الملف
+$ git clean -n
+يظهر الملفات التي سوف تحذف
+Would remove 22.txt
+للقبول (حذف الملفات)
+$ git clean -f
+
+=====
+resetting the head
+حذف الكومت التي لا احتاجها
+
+$ touch good.txt
+$ git add good.txt
+$ git status
+$ git commit -m "good flie"
+$ git push origin master
+
+
+ touch bad.txt
+ git add bad.txt
+ git status
+ git commit -m "bad flie"
+ git push origin master
+
+$ git log
+يظهر معلوات
+والكومت الاخير
+bad.txt
+$ git log
+commit 4015e260a84a613f2ee876407c64d9f59668c5f9 (HEAD -> master, origin/master)
+Author: Ali <aardwolf.xxvll@gmail.com>
+Date:   Sat Feb 12 23:31:05 2022 +0300
+
+    bad flie
+
+commit 91978c350b569af4d57bd0041909edc5730ec43b << الهاش الخاص بالكومت
+Author: Ali <aardwolf.xxvll@gmail.com>
+Date:   Sat Feb 12 23:26:07 2022 +0300
+
+    good flie
+
+commit 01cd7a69e8dd8a8319c60d0f11f2e41f26e2a89d
+Author: Ali <aardwolf.xxvll@gmail.com>
+Date:   Sat Feb 12 21:13:49 2022 +0300
+
+q
+للخروج 
+
+يحف كل شي
+$ git reset --hard
+
+هنا حذف جميع الكومت ما عدى 
+good file 
+$ git reset --hard 91978c350b569af4d57bd0041909edc5730ec43b
+الهاش اعلاه خاص بكومت ال 
+good.txt
+* هنا جلعنا ال good  هو الهيد
+
+يعني لو عندنا 5 كومنت 12345
+الخامس هو اخر كومنت
+عند اخذ كومنت 3 وجعله هيد
+يحذف منه وصاعد اي يحذف 45
+يبقي اسفل الهيد
+12
+
+ثم عمل رفع
+$ git push origin master --force
+
+========================
+lgnoring files and directories
+تجاهل ملفات معينه قبل رفع المشروع
+
+$ touch .gitignore
+الدخول الى الملف عن طريق محرر
+$ code .gitignore
+اصافة الكلمة بداخلة 
+ *.log
+معناها اي ملف امتدادة لوك لا يراه
+
+انشاء ملف
+$ touch y.log
+
+$ git status
+لا يرى y.log
+
+اي ملف نهاية لوك لايراه
+-
+ما عدى ملفات محدده مثلا
+$ touch vip.log
+$ git status
+لا يراه
+نفتح المحرر 
+ونكتب 
+*.log
+!vip.log
+$ git status
+هنا يظهر ملف vip
+-
+تجاهل فولدر
+$ mkdir node_packs
+$ ls اظهار الملفات
+$ git status
+
+الدخول الى الملف
+cd node_packs
+وانشاء ملف بداخلة
+$ touch packagel.js
+$ ls
+رجوع للخلف
+$ cd ..
+$ ls
+$ git status
+يظهر الملفات التالية
+       .gitignore
+        node_packs/
+        vip.log
+
+نفتح المحرر 
+ونكتب 
+*.log
+!vip.log
+node_packs/
+
+$ git status
+        .gitignore
+        vip.log
+لا يظهر ملف node_packs
+
+ايضا يمكن عمل ignor
+لملف مع معين
+مثلا text.txt
+$ touch text.txt
+
+نفتح المحرر 
+ونكتب 
+*.log
+!vip.log
+node_packs/
+text.txt
+
+$ git status
+لايظهر txt.
+
+ملخص اي نص داخل ملف 
+.gitignore
+لايظهر باستثناء
+!vip.log 
+(!) قبل كل نص
+-
+$ git add text.txt
+يظهر مسج انه ملف ايكنور
+
+لاضافة المف حتى لو كان داخل ملف ايكنور
+$ git add --forc
+or 
+$ git add --f text.txt
+$ git status
+يظهر الملف
+=================
+tagging and releasing
+التعليم على حاجه في المشروع فيوقت معين
+مثلا عمل مشروع الاصدار الاول
+ثم 2 3 4 5 
+ميزت التاك تحميل كل مشورع وحده
+
+$ touch first.txt
+$ git add first.txt
+$ git commit -m "first flie pro"
+$ git push origin master
+
+$ git tag يظهر التاكات
+
+انشاء تاك
+$ git tag v1.0
+$ git tag
+     v1.0
+
+uplaod tag to ser
+$ git push origin v1.0
+نذهب الى الكيت ونرى التاك
+
+ touch first1.txt
+ git add first1.txt
+ git commit -m "new version pro"
+ git push origin master
+$ git tag -a v2.0 -m "second ver"
+$ git push origin v2.0
+
+-
+git tag -l "v1.*"
+جلب الاصدارات فيرجن 1
+
+من الموقع انشاء 
+reases 
+للمفريجن v2
+new rel>>وصف >>publish rel
+
+لحف الرليس او التاك من الموقع وحذف
+او عن طري الكومند لاين
+$ git tag -d v1.0
+هنا تم حذفة محلي local
+-
+حذف من الكيت remotly
+$ git push origin --delete v2.0
+===========
+$ mkdir nameFlie
+$ cd nameFlie
+$ git init
+انشاء الكيت في داخل بروجكس معين
+الكيت هنا يقوم بمتابعة هذا الملف
+ادئما عمل كيت انت عند انشاء ملف
+
+يظهر الاشياء المخفية
+$ ls -a
+يظهرها بشكل مرتب
+$ ls -la
+معرفة الاشياء بداخل الكيت
+$ ls -la .git
+
+$ git log -n3
+يظهر فقط 3 لوك
+
+اظهار مسار 
+cd .git
+cat HEDD
+
+$ git diff
+يظهر التغييرات التي حصلت
+a after
+b befor
+
+$ git diff --staged
+اظهر الموجودات في الاستيج
+
+حف فايل
+$ git rm a.txt
+rm حف
+هنا عند الحف لايمكن استرجاع المحذوف
+عكس الحف يدوي كلك ودلييت
+
+اعادة تسمية ملف
+$ git mv nameold.txt namenew.txt
+
+اضافة كل شي في work dir
+$ git commit -am "sss"
+الى الاستيج
+
+
+$ git log --oneline
+يظهر التغييرات التي حصلت في pc
+
+$ git diff origin/master..master
+يظهر التغيرات التحصلت
+
+$ git log --online origin/master
+$ git log --online master

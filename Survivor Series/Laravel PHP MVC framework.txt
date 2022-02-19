@@ -1,0 +1,376 @@
+﻿تنصيب laravel
+===
+تنصيت برنامج xampp
+تصيب composer
+
+للتاكد من composer موجود
+run => smd
+composer -v
+
+composer --version معرفة توع النشخة
+
+================*
+تنصيب laravel
+                                               # اسم المشروع
+composer create-project --prefer-dist laravel/laravel blog
+ننسخ الكي 
+بعد اكتمال التنصيب
+
+-------------------------
+طريقة ثانية
+ افضل
+نحدد مسار المشروع
+
+انشاء مشروع على سطح المكتب ***
+
+cd Desktop
+pwd
+ls
+clear 
+                                                        # اسم المشروع
+composer create-project laravel/laravel --prefer-dist hello_laravel_heroku
+-----------------
+cmd  للمراقبة
+php artisan serve
+----------------- 
+
+للتشغيل المشروع
+cd blog
+
+ls
+
+clear
+
+php artisan serve يساعد في تنفيذ بعض الاوامر لل laravel
+
+<http://127.0.0.1:8000>  الlaravel 
+يعمل على هذا الرابط
+
+نفتح الرابط في المتصفح
+-------------
+Routing pages
+توجيه الصفحات
+
+نفتح برنامج visual Studio code
+
+open folder
+
+app => routes => web.php  
+--
+داخل ال routes
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+للعرض في المتصفح
+http://127.0.0.1:8000
+يظهر
+laravel 
+
+# اتغيير النص 
+من ال resources => views => welcome.blade.php
+-----------------
+-----------------
+
+resources => views => welcome.blade.php
+
+<div class="content">
+<div class="title m-b-md">
+
+laravel # يمكن تغيره لاي نص 
+</div>
+
+يظهر في الواجة الرئيسية في المتصفح
+http://127.0.0.1:8000
+-----------------
+Route::get('about', function () {
+    return 'welcome to AAA';
+});
+
+للعرض في المتصفح
+http://127.0.0.1:8000/about
+
+يظهر welcome to AAA
+-----------------
+Route::get('about/me', function () {
+
+        return 'welcome to page';
+
+http://127.0.0.1:8000/about/me
+يظهر
+welcome to page
+-----------------
+صنع متغير داخل ال routes
+المتغير بين الاقواس {}
+
+Route::get('about/{myVar}', function ($myVar) {
+
+return $myVar.'welcome to AAA';
+});
+
+http://127.0.0.1:8000/about
+-----------------
+or ممكن
+http://127.0.0.1:8000/about/ali
+
+يظهر 
+ali welcome to AAA
+-----------------
+or ايضا
+
+Route::get('about/profile/{myVar}', function ($myVar) {
+
+    return "welcome $myVar" ;
+});
+
+http://127.0.0.1:8000/about/profile/Ali
+يظهر
+welcome Ali
+-----------------
+total ex
+--
+Route::get('/', function () {
+
+    return view('welcome');
+});
+
+
+Route::get('about', function () {
+
+    return 'welcome to page';
+});
+
+
+Route::get('about/me', function () {
+
+        return 'welcome to page';
+
+    
+});
+Route::get('about/{myVar}', function ($myVar) {
+
+    return $myVar.' welcome to page';
+});
+
+
+
+Route::get('about/profile/{myVar}', function ($myVar) {
+
+    return "welcome $myVar" ;
+});
+
+-----------------
+-----------------
+
+assets 
+تحنوي على js & css ..
+
+--------------------^
+
+public يحتوي
+css js
+
+css => app.css
+
+
+صنع فايل 
+click on css newfile
+name is
+main.css
+
+--
+main.css
+
+.mycolor{
+    color: green;
+}
+---
+welcome.blade.php
+
+استدعاء ملف ال css
+
+ </style>
+        
+<link rel="stylesheet" href="<?php echo asset('css/main.css');?>" type="text/css">
+    
+</head>
+--
+
+<div class="title m-b-md mycolor">
+
+   
+laravel
+                
+</div>
+---------------------------------^
+ربط الlaravl 
+مع database
+
+config  => database.php
+
+نغير الى
+                                
+'mysql' => [
+
+            
+            
+'host'      => '127.0.0.1',
+            
+'driver'    => 'mysql',
+            
+'database'  => 'blog',
+   # اسم قاعدة البيانات           
+'username'  => 'ali',
+            
+'password'  => '12345',
+            
+'charset'   => 'utf8',
+            
+'collation' => 'utf8_unicode_ci',
+            
+'prefix'    => '',
+            
+        
+],
+
+
+--انشاء قاعدة بيانات--
+من المتصفح http://localhost/phpmyadmin
+نشغل برنامج xampp
+
+new => name database is blog =>create
+
+اضافة user
+blog  => privileg
+
+new => Add user account
+user  any name
+host local
+pass   any
+re-type to pass
+
+Global privileges check all 
+
+Go
+
+---
+user accounts
+يمكن رويت الهوست
+---
+user accounts => Database => Edit privileges 
+للتاكد من المعلومات او التديل
+----------------
+انشاء tabel
+
+routes => web.php
+
+Route::get('/', function () {
+
+
+    Schema::create('progremmers', function($myTable)
+
+    {
+
+        $myTable->increments('id');
+
+        $myTable->string('name');
+
+        $myTable->string('lastname',30);
+
+        $myTable->string('description',500);
+
+        $myTable->date('created');
+
+        $myTable->string('age');
+
+        $myTable->timestamps();
+
+    });
+
+    return view('welcome');
+
+});
+
+
+increments('id');
+
+id auto يزداد
+-
+
+
+string 255 حرف
+('description',500) 500 حرف
+>date للتاريخ
+
+--------------------------
+في Database.php
+نعدل عليه
+
+        'mysql' => [
+
+            
+            'host'      => '127.0.0.1',
+
+            'driver'    => 'mysql',
+
+            'database'  => 'blog',
+
+            'username'  => 'ali',
+            'password'  => '12345',
+
+            'charset'   => 'utf8',
+
+            'collation' => 'utf8_unicode_ci',
+
+            'prefix'    => '',
+            
+        
+],
+
+------------------------------------------
+الجزء الثاني من laravel
+
+أنشاء مشروع كامل
+
+------------------------------------------
+انشاء مشروع على سطح المكتب ***
+
+cd Desktop
+pwd
+ls
+clear 
+                                                        # اسم المشروع
+composer create-project laravel/laravel --prefer-dist hello_laravel_heroku
+------------------------------------------
+------------------------------------------
+ننسخ الكي 
+بعد اكتمال التنصيب
+Application key [base64:ocM/Xci323DgGsNs4GckyLI58TXHXRgkiR0WB+S8WaY=]
+------------------------------------------
+بعد التنصيب ندخل الى التطبيق
+cd hello_laravel_heroku
+-----------------
+git init
+
+git add .
+
+git commit -m "new laravel project"
+
+echo web: vendor/bin/heroku-php-apache2 public/ > Procfile
+
+git add .
+
+git commit -m "Procfile for Heroku"
+--------------------
+للتاكد من ان الهيركو يعمل
+heroku
+اذا لم يوجد نحمل الهيركو
+---------------------
+تسجيل الدخول لهيركو
+heroku login
+------------------------------------------
+------------------------------------------
+Laravel PHP MVC framework  
+شرح البرنامج

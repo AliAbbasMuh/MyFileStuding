@@ -1,0 +1,1270 @@
+﻿                                 -شرح لغة php-
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+<?   كتابة كود  php 
+   echo"welcom";   أمر الطباعة
+   or use
+   print"welcom';  او استخدام print 
+?>
+-----------------------------------------------------------------------------------------
+                        الغاء سطر
+//    التعليق لا يظهر   يمكن ايضا ان تستخدم لالغاء كود معين
+-----------------------------------------------------------------------------------------
+/*
+
+    التعليق لا يظهر   يمكن ايضا ان تستخدم لالغاء كود معين
+    او تستخدم لوضع تعليقات داخلها لا تظهر اثناء الطباعة    
+
+*/
+-----------------------------------------------------------------------------------------
+طربط  html  مع  php
+<html>
+<head>
+<title>any</title>
+</head>
+<body>
+<?
+echo"<h3> welcom</h3>";
+?>
+</body>
+</html>
+او طريقة اخرى
+----------------------
+<?
+echo"
+<html>
+<head>
+<title>any</title>
+</head>
+<body>
+<p> wlcom</p>
+</body>
+</html>
+";
+?>
+-----------------------------------------------------------------------------------------
+عند كتابة الاكواد يجب مراعات الفوارز
+مثل
+<?         //    عند مايكون الخارج دبل فارزه يكون الداخل واحد او بلعكس
+//   2          1   1             2   
+echo"<font size='10px'>welcom</font>";
+?>
+-----------------------------------------------------------------------------------------
+المتغيرات
+
+-----------------------------------------------------------------------------------------
+<?php
+$ali="welcoms";           //string   //  $ali متغير
+echo $ali;
+echo"<br/> helo<br/>";
+echo $ali;
+$a="<br/>hi<br/>";
+echo $a;
+?>
+-----------------------------------------------------------------------------------------
+<?
+$ali ="ilove";      //string
+echo $ali;
+echo"<br /> welocm<br />";
+echo $ali;
+?>
+-----------------------------------------------------------------------------------------
+<?
+$ali= 2006;      //int
+echo $ali;
+?>
+-----------------------------------------------------------------------------------------
+<?php
+$n1=12;             //int
+$n2=2;
+$s=$n1 + $n2;   //  + * % - /   + يمكن وضع اي من هذه العلامات بدل 
+echo $s;
+?>
+-----------------------------------------------------------------------------------------
+الثوابت
+<?php
+             //   ali اسم الثابت   - welcom  المحتوى
+define('ali','welcom');
+echo ali;
+?>
+-----------------------------------------------------------------------------------------
+<?php
+/*
+define('ali','welcom');
+echo ali; 
+*/
+?>
+-----------------------------------------------------------------------------------------
+<?php
+
+//define('ali','welcom');
+echo ali; 
+
+?>
+-----------------------------------------------------------------------------------------
+الشروط
+
+<?
+$ali=2;
+           // يمكن وضع بدل ==   >=  <=  <  >  
+if($ali==2){
+echo"welcom";  // اي اذا علي يساوي 2 يطبع مرحبا
+}
+?>
+-----------------------------------------------------------------------------------------
+في حالة عدم تطبيق الشرط
+<?
+$level=2;
+
+if($level==3){
+echo"welcom";  // اذا تحقق الشرط يطبع مرحبا
+}else{
+echo"ohhhhh";  // اذا لم يتحقق الشرط  يطبع  ohhhhhhhh
+}
+
+?>
+-----------------------------------------------------------------------------------------
+<?
+$level=2;
+$age=18;
+if($level==3){
+echo"welcom";   // اذا تحقق الشرط يطبع مرحبا
+}elseif($age >18)
+{
+echo"error";   // اذا لم يتحقق الشرط  يطبع error
+}else{
+echo"age is";  // اذا لم يتحقق الشرطين يطبع age is 18
+echo $age;
+}      //  age is 18 اي اذا كان علي اصغر من 18 يطبع خطى  واذا كان يساوي او كبر من 18 يطبع 
+
+?>
+-----------------------------------------------------------------------------------------
+<?
+$level=2;
+$age=18;
+if($level==3 or $level==18){   //   level اما يساوي 3  او  18 
+echo"succed";                 //  لتحقيق الشرط
+}else{
+echo"errer";
+}
+
+?>
+-----------------------------------------------------------------------------------------
+or = ||    تعني او  
+------------------
+and - &  يجب تحقيق الشرطين
+-----------------------
+طريقة اخرى
+<?
+$ali=2;
+$age=18;
+if($ali==2 & $age==18)
+echo"welcom";
+else echo"errer";
+
+?>
+-----------------------------------------------------------------------------------------
+طريقة اخرى
+<?
+$ali=2;
+$age=18;
+if($ali==2 & $age==18):
+echo"valid";
+else:
+ echo"not valid";
+endif;
+?>
+-----------------------------------------------------------------------------------------
+switch
+<?
+$favoritecolor="green";
+switch($favoritecolor){
+    case "red":
+      echo"your color is red";
+    break;
+    case "green":
+      echo"your color is green";
+    break;
+    case"yellow":
+      echo"your color is yellow";
+    break;
+}
+?>
+-----------------------------------------------------------------------------------------
+while   التكرار
+<?
+$number=1;
+while($number <=20){
+echo $number;
+echo"<br/>";
+$number++;
+}
+?>
+-----------------------------------------------------------------------------------------
+طريقة اخرى
+<?
+$number=1;
+while($number <=20):
+echo $number;
+echo"<br/>";
+$number++;
+endwhile;
+?>
+-----------------------------------------------------------------------------------------
+for
+<? //  1        2            3          
+for($number=0;$number<=20;$number++)
+{
+echo $number;           //1 اسم الدالة 
+}                       // 2   الشرط
+?>                      // 3 المحتوى زيادة او نقصان
+-----------------------------------------------------------------------------------------
+طريقة اخرى
+<?
+for($number=0;$number<=20;$number++):
+
+echo $number;
+endfor;
+?>
+-----------------------------------------------------------------------------------------
+do
+<?
+$number=20;
+do{
+echo"ture";
+}
+while($number <10);
+?>
+-----------------------------------------------------------------------------------------
+المصفوفات
+<?
+//    index       0       1         2       3
+$username=array("ali","mohammed","ahmed","yousf");
+echo $username [3]
+?>
+-----------------------------------------------------------------------------------------
+<?   //   index        1       2         3       4
+$username=array("1"=>"ali","mohammed","ahmed","yousf");
+echo $username [3]
+?>
+-----------------------------------------------------------------------------------------
+طريقة اخرى
+<?
+$username=array("user1"=>"ali","user2"=>"mohammed","user3"=>"ahmed","user4"=>"yousf");
+echo $username ["user3"]
+?>
+-----------------------------------------------------------------------------------------
+function    الدوال
+<?
+function image_profile(){
+echo"
+<table border='1'>
+<tr>
+<td>pic</td>
+<td><img src='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPQPkaaFmLqXIoTpRTtw7_8SfHeiwDztF48bpfrKdnntQCadTW-qGRLiMJ'/</td>
+</tr>
+<td>name</td>
+<td>ali</td>
+</tr>
+</table>
+";
+}
+image_profile();  //  للطباع   - عند التكرار يطبع اكثر 
+?>                // فائدة الفاكشن يقلل من الاكواد بدل من كتابة التايبل  عدة مرابط نستخدم 
+                  // function 
+-----------------------------------------------------------------------------------------
+طريقة اخرى
+<?  //                  1      2      3
+function image_profile($url,$height,$name){
+echo"                                       //1  رابط الصورة
+<table border='1'>                          //2 تحديد الارتفاع
+<tr>                                        //3 تحديد الاسم
+<td>pic</td>
+<td><img src='".$url."'height='".$height."'name='".$name."'/></td>
+</tr>
+<tr>
+<td>name</td>
+<td>ali</td>
+</tr>
+</table>
+";
+}   //                       اسم   ارتفاع                                            رابط الصورة  
+image_profile('http://top-new.net/images/img_1/67d72a64b140bc962fe1163bdaeeb3f7.jpg','100','ali');
+                       // جملة الطباعة يمكن تكرارها 
+?>
+-----------------------------------------------------------------------------------------
+function image_profile($url,$height=100,$name)
+يمكن وضع قيم افتراضية وتلرك الاخير فارغ
+image_profile();
+
+وعند وضع قيم في الاول والاخير يتم تطبيق القيم المدخلة في الاخير
+-----------------------------------------------------------------------------------------
+Return
+<?
+function number($n1 ,$n2){
+return $n1 + $n2;             // +  /  -  *  %
+}
+$some= number(10,40);    //  قيمة   n1 =10   n2=40  
+echo $some;               //  للطباعة الناتج
+?>
+-------------
+//عند وجود جمل طباعة اسفل return 
+لا تطبع مثل
+<?
+echo"ali";   //  لا يطبع
+function number($n1 ,$n2){
+return $n1 +$n2;
+}
+$some= number(10,40);
+echo $some;
+?>
+//  العكس صحيح يطبع
+-----------------------------------------------------------------------------------------
+الدلة include
+نقوم بانشاء 3 ملفات 
+//  file1.php  file2.php  file3.php 
+
+file 1.php
+<?
+include"file 2.php";
+  name();
+?>
+----------------
+file 2.php
+<?
+include"file 3.php";
+function name(){
+   echo"welcom ";
+   
+   }
+?>
+--------------
+file 3.php
+<?
+echo"my name is ali";
+?>
+------------------------
+عند استخدام include 
+اكثر من مرة يحصل خطىلذالك نستخدم
+include_once
+file 1.php
+<?
+include"file 2.php";
+  name();
+?>
+--------
+file 2.php
+<?
+include_once"file 3.php";
+function name(){
+   echo"welcom ";
+   
+   }
+?>
+--------------
+file 3.php
+<?
+include_once"file 2.php";
+echo"my name is ali";
+?>
+-----------------------------------------------------------------------------------------
+الدالة require
+نفس عمل include
+يمكن تطبيق نفس اتلمثال السابق ولاكن نستخدم require
+عند استخدام require 
+اكثر من مرة يحصل خطىلذالك نستخدم
+require_once
+<?               file 1.php
+require"file 2.php";
+  name();
+?>
+----
+<?               file 2.php
+require_once"file 3.php";
+function name(){
+   echo"welcom ";
+}
+?>
+----
+<?               file 3.php
+require_once"file 2.php";
+echo"my name is ali";
+?>  
+// الفرق بين require و include 
+اذا حصل خطىء في كود require
+لايطبع
+بعكس include
+اي اذا حصل خطىء في كود دالة require 
+يتوقف السكريبت
+-----------------------------------------------------------------------------------------
+ المتغيرالمتغير
+<?
+$var="welcom";
+$$var="ali";
+echo $var;           or $$var; // يطبع ali         or ${$var}; print ali 
+?>         
+-----------------------------------------------------------------------------------------
+Super Globals
+المصفوفات الخارقة
+<?
+echo"    //               ارسال    ارسال الى
+<form action='superGlobals.php'method='POST'>
+username : <input name='user' type='text'/><br />
+password : <input name='pass' type='password'/><br />
+<input name='log' value='login' type='submit'/>
+</form>
+";
+$username=$_POST['user'];
+$userpass=$_POST['pass'];
+echo $username;
+echo '<br/>';
+echo $userpass;
+?>
+-------------------
+<?
+echo"   //                            يستقبل    
+<form action='superGlobals.php'method='GET'>
+Search : <input name='search' type='text'/> <br />
+<br />
+<input name='se' value='search' type='submit'/> <br/>
+</form> <br/>
+";
+$se = $_GET['search'];
+
+echo $se;
+
+?>
+----------------------
+POST  ارسال المعلومات
+GET  يستقبل المعلومات
+
+في ال post  لا تظهر البيانتا
+بعكس get
+----------------------
+<?
+$user="ali";
+function uss(){
+global $user;
+echo $user;
+}
+uss();
+?>
+
+---------------
+طريقة اخرى
+<?
+$user="ali";
+function uss(){
+
+echo $GLOBALS['user'];
+}
+uss();
+?>
+-----------------------------------------------------------------------------------------
+التحقق من الحقول
+<?
+$name=$_POST['name'];
+$email=$_POST['email'];
+$adrees=$_POST['adrees'];
+
+if($_POST['add']){
+
+if(empty($name)){  // يجعل ادخال الاسم اجباري
+echo"<h1 style='color:red';>error : plase enter name</h1>";  // عند الادخال الخاطىء يطبع 
+}elseif(empty($email)){   // يجعل ادخال الايميل اجباري 
+echo"<h1 style='color:red';>error : plase enter email</h1>";  // عند الادخال الخاطىء يطبع
+}else{
+echo"<h1 style='color:green';>thank you</h1><br/>";  //  عند الادخال الصحيح يطبع
+echo"your name is ".$name."<br/>";
+echo"your email is ".$email."<br/>";
+echo"your adrees is ".$adrees."<br/>"; // جملة طباعة يمكن حذفها
+}
+}
+echo'
+<form action="formv.php"method="POST">
+name : <input name="name"type"text"/><br/>
+email : <input name="email"type"text"/><br/>
+adrees : <input name="adrees"type"text"/><br/>
+<input name="add"type="submit"value="add mumber"/>
+</form>
+';
+?>
+-----------------------------------------------------------------------------------------
+دالة استبدال النصوص
+<?
+if(isset($_POST['addcm'])){
+$cm =$_POST['comments'];
+//           المتغير  البدل  اسم الكلمة السيىء
+$comments = str_replace('bad','********',$cm);
+echo $comments;
+}
+echo'
+<form action="str_replace" method="POST">
+<textarea name="comments">
+</textarea>
+<input name="addcm" type="submit" value="add comments"/>
+</form>
+';       //  str_replace نوع واحد من الاحرف اما صغير او كبيرة
+?>      //ireplace  any comments اي نوع
+// الفائدة استبدال النصوص او الالفاض السيئة وضع شي اخر مثل *****
+-----------------------------------------------------------------------------------------
+دوال حماية الدخلات
+حماية الصفحة من الاختراق
+<?                         //  تعطيل اكود html
+$comments=strip_tags($_POST['cm']);  //   لاتظهر اكواد html
+or  $comments=htmlspecialchars($_POST['cm']); //  تظهر اكواد html في التعليقات
+echo $comments;
+?>
+<form action="form.php" method="POST">
+comments : <textarea name="cm"></textarea><br/>
+<input name="addcm" type="submit" value="add comments"/>
+</form>
+-----------------------------------------------------------------------------------------
+اقتصاص النصوص
+<?
+$text="welcom            **";
+//   الى  من   اسم الدالة
+echo substr($text,0,15);   or echo mb_substr($text,0,15,'UTF-8');
+echo "....<a href='#'>More</a>"; // اي من الحرف0 الى الحرف 15
+?>
+يمكن استخدام mb substr
+بدل substr
+الفرق اضافة خانة رابعه
+حل مشكلة اللغة العربية
+echo substr($text,0,15,'utf-8');
+-----------------------------------------------------------------------------------------
+الكعكات cookies
+<? //    الوقت      قيمت اليوزر اسم الكوكز
+setcookie("username","ali",time()+60+60*24);
+setcookie("password","123456",time()+60+60*24);
+?>
+الفائدة هنا يتم تخزين الاسم والباسورد 24 ساعة 
+ثم يسجل خروج تلقائي
+----------------------------------------------
+لمعرفة اسم والباسورد الذي تم ادخاله
+<?
+echo $_COOKIE['username'];
+echo "<br/>";
+echo $_COOKIE['password'];
+?>
+----------------------------------------------
+تطبيق على الكوكزالورقة الاولى
+<?
+$u_user=$_POST['u_user'];
+$u_pass=$_POST['u_pass'];
+if(isset($_POST['log'])){
+setcookie("u_name",$u_user,time()+60+60+25);
+setcookie("u_pass",$u_pass,time()+60+60+25);
+hesder("location:home.php");
+}
+echo'
+<form action="cookies.php"method="POST">
+username : <input name="u_user" type="text"/><br/>
+password: <input name="u_pass" type="password"/><br/>
+<input name="log" type="submit" value="login"/>
+</form>
+';
+?>
+----
+الورقة الثانية
+<?
+define(username,$_COOKIE['u_name']);
+define(password,$_COOKIE['u_pass']);
+echo"
+<b> welcom  ".username." your password is : ".password."</b>
+";
+?>
+-----------------------------------------------------------------------------------------x
+الجلسات
+<?
+session_start();  // ضروري تكون في البداية
+if($_GET['type'] == 'Logout'){
+session_destroy();  //  تدمير الجلسة اي تسجيل الخروج
+}
+$u_user=$_POST['u_user'];
+$u_pass=$_POST['u_pass'];
+
+if(isset($_POST['log'])){
+
+    if(empty($u_user)and empty($u_pass)){
+        echo"place complet all information";
+    }else{
+    $_SESSION['username']=$u_user;
+ 
+    }
+	
+}
+$usernm =$_SESSION['username'];
+if(empty($usernm)){
+
+echo'
+<form action="cookies.php"method="POST">
+username : <input name="u_user" type="text"/> <br/>
+password : <input name="u_pass" type="password"/> <br/>
+<input name="log" type="submit" value="login"/>
+</form>
+';
+}else{
+echo"welcom :$usernm<br /> <a style='color:red;'href='?type=Logout'>Logout</a>";
+}
+?>
+-----------------------------------------------------------------------------------------x
+دالة الوقت والتاريخ
+------------------------
+<?  // التاريخ
+echo date("d/m/Y");
+?>
+------------------------
+<?  // الوقت
+echo date("H:i:s");
+?>
+------------------------
+جمع الحالات
+<?
+// Y كبير يضهر السنة كامله اي 2004مثل
+echo date("d/m/Y-H:i:s");  // h صغير نظام 24 ساعة
+?>                       // H كبير نظام 12 ساعة
+-----------------------------------------------------------------------------------------
+دالة header
+لايمكن كتابة اي شي قبل header
+الحل كتابة الكود كما في الاسفل
+<?
+ob_start();
+echo"ali";
+header("Location:http://google.ae");
+ob_flush();       // عند الارسال يتم حذف البيانات
+or  ob_end_flush  // عند الارسال يحتفظ بالبيانات
+?>
+-----------------------------------------------------------------------------------------
+التعامل مع الملفات
+يقوم بالتحويل الى صفحة اخرى
+<?     //      استدعاء ملف
+echo readfile("file2.php");
+------or ---- طريقى اخرى-------
+$file=readfile("file2.php");
+   echo $file;
+?>
+-----------------------------
+قراءة - فتح - اغلاق ملف 
+نستخدم نفس الملف السابق اعلى
+<? //           طريقة الفتح اسم الملف
+$thefile=fopen("file2.txt","r");  // r قراءة فقط
+$thesizeoffile=filesize("file2.txt");
+echo fread($thefile,$thesizeoffile);
+fclose($thefile);
+?>      // w الكتابة على الملف ونشاء ملف بنفس الاسم اذا لم يكن موجود
+       // x  انشاء ملف للكتابة فقط
+------------------------------
+<?  // اسيم اللف المراد فتح ali.txt
+$newfile=fopen("ali.txt","w");
+$filecontent="welcom";
+fwrite($newfile,$filecontent);
+fclose;
+?>
+-----------------------------------------------------------------------------------------
+رفع الملفات والصور
+عمل مركز رفع الصور
+<?
+if(isset($_POST['upfile'])){
+if($_FILES['file']['error']>0){
+echo "error : ".$_FILES['file']['error']."<br />";
+}else{
+echo"name:".$_FILES['file']['name']."<br />";
+echo"type:".$_FILES['file']['type']."<br />";
+echo"size:".($_FILES['file']['size']/1024)."KB<br />";
+echo":".$_FILES['file']['tmp_name']."<br />";
+move_uploaded_file($_FILES['file']['tmp_name'],"up/".$_FILES['file']['name']."");
+echo"the file stored in : up/".$_FILES['file']['name']."";
+                    //    up اسم الملف داخل المجل c بالحاسوب
+                    //  or echo"<img src='up/".$_FILES['file']['name']."'/>";
+}  
+}
+echo"
+<form action='upload.php' method='post' enctype='multipart/form-data'>
+file : <input name='file' type='file'/><br />
+<input name='upfile' type='submit' value='upload'/><br />
+<?form>
+";
+?>
+-----------------------------------------------------------------------------------------
+تنصيب السيرفر المحلي
+بعد ال next
+نؤشر الخيارات الاربعة
+في server name نكتب
+localhost
+في administrators
+root@root.com
+next ثم
+enter root password 
+نكتب root
+root
+next
+finish
+-----------------------------------------------------------------------------------------
+قواعد البيانات
+     mysql
+انشاء قاعدة بيانات وعمل اتصال
+الذهاب الى المتصفح وكتابة
+localhost
+ثم الذهاب الى 
+phpMyAdmin Database Manager Version 2.10.3
+ثم نختار اسم ورقم الدخول
+user   root
+pass   root
+ثم من
+Create new database
+اسم قاعدة البيانات مثل
+mywebsite
+ثم   create
+---------
+ثم انشاء ملف 
+config.php 
+	 
+	 
+<?
+$connectdb=mysql_connect(
+    'localhost',  //hostname
+	'root',       // username
+	'root'        // password
+	) or die(mysql_error());
+	$selectdb=mysql_select_db("mywebsite") or die(mysql_error());
+	
+?>
+-----------------------------------------------------------------------------------------
+الادخال الى قاعدة البيانات
+من هنا يمكن انشاء جدول خاص بالاعضاء
+وغير ذلك
+نتوجه الى localhost
+mywebsite قاعدة البيانات التي تم انشائها
+ثم ندخل اسم قاعدة البيانات وعدد الحقول
+المراد اضافتها مثل 
+id - user -pass -email -about 
+الى غير ذالك
+id دائما نختار 
+n_id
+type - int 
+Extra - auto increment
+primary
+---
+name  pass email  about
+n_title
+type - VARCHAR
+length - 255
+---
+n_subject - LONGTEXT
+---
+comments
+type - text
+ثم  
+save
+
+-----------------------------------------------------------------------------------------
+ انشاء ملف تسجيل العضوية
+ register.php
+<?
+include'config.php';      // استدعاء ملف config.php
+$pagename=$_SERVER['PHP_SELF'];
+/*CREATE TABLE  `user` (
+ `u_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `u_name` VARCHAR( 255 ) NOT NULL ,
+ `u_pass` VARCHAR( 255 ) NOT NULL ,
+ `u_email` VARCHAR( 255 ) NOT NULL ,
+ `u_about` TEXT NOT NULL
+) ENGINE = MYISAM ;
+
+*/
+#====================[POST VALUE]======================#
+$u_name =$_POST['u_name'];
+$u_pass =$_POST['u_pass'];
+$u_email=$_POST['u_email'];
+$u_about=$_POST['u_about'];
+#====================[POST VALUE]======================#
+if(isset($_POST['adduser'])){ 
+$Adddb = mysql_query("INSERT INTO user  // قم بالادخال في اليوزر 
+(u_name,u_pass,u_email,u_about)   // mysql_query داله لمخاطبة قواعد البيانات
+VALUES
+('$u_name','$u_pass','$u_email','$u_about')
+") or die(mysql_erroe());
+if(isset($Adddb)){
+echo"
+<h2>insert is done</h2>  // تم تسجيل العضوية بنجاح
+";
+exit;
+}
+}
+echo"
+<form action='".$pagename."' method='POST'>
+username : <input name='u_name' type='text' /><br />
+password : <input name='u_pass' type='text' /><br />
+email    : <input name='u_email' type='text' /><br />
+about    : <input name='u_about' type='text' /><br />
+<input name='adduser' type='submit' valur='register'/>
+</form>
+";
+mysql_close($connectdb);  // غلق الاتصال
+?>
+-----------------------------------------------------------------------------------------
+استخراج البيانات التي تم انشائها
+SELECT
+user.php
+<?
+include"config.php";
+/*CREATE TABLE  `user` (
+ `u_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `u_name` VARCHAR( 255 ) NOT NULL ,
+ `u_pass` VARCHAR( 255 ) NOT NULL ,
+ `u_email` VARCHAR( 255 ) NOT NULL ,
+ `u_about` TEXT NOT NULL
+) ENGINE = MYISAM ;
+
+*/
+echo"
+<table width='50%' border='1'>
+<tr>
+<td>User ID</td>
+<td>User Name</td>
+<td>User pass</td>
+<td>User Email</td>
+<td>User About</td>
+</tr>
+";
+$selectDbUser =mysql_query("SELECT * FROM user");
+while($userf=mysql_fetch_assoc($selectDbUser)){ 
+echo"                  //mysql_fetch_assoc تقوم بتحويل المعلومات الى مصفوفة
+<tr>
+<td>".$userf['u_id']."</td>
+<td><a href='profile.php?id=".$userf['u_id']."'>".$userf['u_name']."</a></td>
+<td>".$userf['u_pass']."</td>
+<td>".$userf['u_email']."</td>
+<td>".$userf['u_about']."</td>
+
+</tr>";
+}
+echo"
+</table>
+";
+mysql_free_result($selectDbUser);
+mysql_close($connectdb);
+?>
+----------------------------------------------
+limit
+مكمل لموضوع تسجيل العضوية
+نفس الكود السابق مع بعض الاضافاتك كمافي الاسفل
+$selectDbUser =mysql_query("SELECT * FROM user 
+ORDER BY u_id DESC LIMIT 1");
+اي عرض اخر عضو 
+limit 2 ")
+اخر عضوين
+LIMIT 1,3");
+اي عرض مابين 1 و3
+----------------------------------------------
+order by
+عرض قواعد البيانات حسب الترتيب
+طريقة العرض
+DESC تنازليا
+ASC تصاعديا
+كذلك نفس الكود السابق مع بعض الاضافات كما اسفل
+$selectDbUser =mysql_query("SELECT u_id,u_name,u_email FROM user
+ ORDER BY u_id DESC or ASC");
+-----------------------------------------------------------------------------------------?
+where
+الدخول الى العضو واستخراج جميع البيانات
+profilie.php
+<?
+include"config.php";
+$id = intval($_GET['id']);
+$SDb=mysql_query("SELECT * FROM user WHERE u_id ='".$id."'") or die (mysql_error());
+$DBfetch=mysql_fetch_object($SDb);
+if(mysql_num_rows($SDb) == 0){  
+echo"NOT FOUND";
+}else{ //mysql_num_rows عند البحث عن شخص او ايدي غير موجود يظهر لنا not found
+echo"
+<table width='50%' border='1'>
+<tr>
+<td>User ID</td>
+<td>User Name</td>
+<td>User pass</td>
+<td>User Email</td>
+<td>User About</td>
+</tr>
+<tr>
+<td>".$DBfetch->u_id."</td>
+<td>".$DBfetch->u_name."</td>
+<td>".$DBfetch->u_pass."</td>
+<td>".$DBfetch->u_email."</td>
+<td>".$DBfetch->u_about."</td>
+</tr>
+</table>
+";
+}
+mysql_free_result($SDb);
+mysql_close($connectdb);
+?>
+-----------------------------------------------------------------------------------------?
+----------------------------------------
+يمكن كتابة الكود في المثال الاعلى بالطريقة التالية
+<td><a href='profile.php?id=".$userf['u_id']."/>".$userf['u_name']."</a> <td>
+يمكن من خلال هذه الطريقة عند الظغط على الاسم يدخل الى الملف الخاص باليوزر
+اي profile
+----------------------------------------
+mysql_free_result
+تستخدم عندما تكون هناك بيانات كثيرة ولاتريد حدوث تنشيط للصفحة وحدوث التاخير
+Refresh
+----------------------------------------
+الفرق بين
+mysql_fetch_assoc
+طريقة المصفوفات
+mysql_fetch_object
+طريقة الكائنات
+----------------------------------------
+-----------------------------------------------------------------------------------------
+تحديث البيانات او  تحديث قاعدة البيانات او تعديل بيانات العضو
+سنعمل على ثلاث ملفات user.php  / profile.php  /  rigister.php
+التغيير فقط على ملف اليوزر اما باقي الملفات ناخذ منها بعض المعلومات
+--      --     --     --    --    --    --   --  --
+ملف user.php
+<?
+include"config.php";
+/*CREATE TABLE  `user` (
+ `u_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `u_name` VARCHAR( 255 ) NOT NULL ,
+ `u_pass` VARCHAR( 255 ) NOT NULL ,
+ `u_email` VARCHAR( 255 ) NOT NULL ,
+ `u_about` TEXT NOT NULL
+) ENGINE = MYISAM ;
+
+*/
+$id = intval($_GET['id']);  //6
+if($_REQUEST['user'] == 'edit'){  //3  REQUEST مصفوفة خارقة  
+$setU = mysql_query("SELECT * FROM user WHERE u_id ='".$id."'"); //5
+$UQuery = mysql_fetch_object($setU); //7
+#====================[POST VALUE]======================#
+$u_name =$_POST['u_name'];
+$u_pass =$_POST['u_pass'];
+$u_email=$_POST['u_email'];   //8
+$u_about=$_POST['u_about'];
+#====================[POST VALUE]======================#
+if(isset($_POST['edituser'])){  //9
+$UpdateDb = mysql_query("UPDATE user SET
+u_name ='$u_name',
+u_pass ='$u_pass',
+u_email ='$u_email',
+u_about ='$u_about'
+WHERE u_id='".$id."'
+");
+if(isset($UpdateDb)){  //10
+     echo"<h3 style='color:green;'>Update Db is Done</h3>";
+     }
+}
+echo"
+<form action='user.php?user=edit&id=".$id."' method='POST'>
+username : <input name='u_name' type='text'value='".$UQuery->u_name."' /><br />
+password : <input name='u_pass' type='text'value='".$UQuery->u_pass."' /><br />  //4
+email    : <input name='u_email' type='text'value='".$UQuery->u_email."' /><br />
+about    : <input name='u_about' type='text' value='".$UQuery->u_about."'/><br />
+<input name='edituser' type='submit' value='Update'/>
+</form>
+";
+}
+echo"
+<table width='50%' border='1'>
+<tr>
+<td>User ID</td>
+<td>User Name</td>
+<td>User pass</td>
+<td>User Email</td>
+<td>User About</td>
+<td>User setting</td>  //1
+</tr>
+";
+$selectDbUser =mysql_query("SELECT * FROM user");
+while($userf=mysql_fetch_assoc($selectDbUser)){
+echo"
+<tr>
+<td>".$userf['u_id']."</td>
+<td><a href='profile.php?id=".$userf['u_id']."'>".$userf['u_name']."</a></td>
+<td>".$userf['u_pass']."</td>
+<td>".$userf['u_email']."</td>
+<td>".$userf['u_about']."</td>
+<td><a href='user.php?user=edit&id=".$userf['u_id']."'>EDIT</a></td>  //2
+
+</tr>";
+}
+echo"
+</table>
+";
+mysql_free_result($selectDbUser);
+mysql_close($connectdb);
+?>
+-----        -------      -------         -------
+ملف profile.php
+<?
+include"config.php";
+$id = intval($_GET['id']);
+$SDb=mysql_query("SELECT * FROM user WHERE u_id ='".$id."'") or die (mysql_error());
+$DBfetch=mysql_fetch_object($SDb);
+if(mysql_num_rows($SDb) == 0){
+echo"NOT FOUND";
+}else{
+echo"
+<table width='50%' border='1'>
+<tr>
+<td>User ID</td>
+<td>User Name</td>
+<td>User pass</td>
+<td>User Email</td>
+<td>User About</td>
+</tr>
+<tr>
+<td>".$DBfetch->u_id."</td>
+<td>".$DBfetch->u_name."</td>
+<td>".$DBfetch->u_pass."</td>
+<td>".$DBfetch->u_email."</td>
+<td>".$DBfetch->u_about."</td>
+</tr>
+</table>
+";
+}
+mysql_free_result($SDb);
+mysql_close($connectdb);
+?>
+------         -------    ---------        ---------
+ملف rigister.php
+<?
+include'config.php';
+$pagename=$_SERVER['PHP_SELF'];
+/*CREATE TABLE  `user` (
+ `u_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `u_name` VARCHAR( 255 ) NOT NULL ,
+ `u_pass` VARCHAR( 255 ) NOT NULL ,
+ `u_email` VARCHAR( 255 ) NOT NULL ,
+ `u_about` TEXT NOT NULL
+) ENGINE = MYISAM ;
+
+*/
+#====================[POST VALUE]======================#
+$u_name =$_POST['u_name'];
+$u_pass =$_POST['u_pass'];
+$u_email=$_POST['u_email'];
+$u_about=$_POST['u_about'];
+#====================[POST VALUE]======================#
+if(isset($_POST['adduser'])){
+$Adddb = mysql_query("INSERT INTO user
+(u_name,u_pass,u_email,u_about)
+VALUES
+('$u_name','$u_pass','$u_email','$u_about')
+") or die(mysql_erroe());
+if(isset($Adddb)){
+echo"
+<h2>insert is done</h2>
+";
+exit;
+}
+}
+echo"
+<form action='".$pagename."' method='POST'>
+username : <input name='u_name' type='text' /><br />
+password : <input name='u_pass' type='text' /><br />
+email    : <input name='u_email' type='text' /><br />
+about    : <input name='u_about' type='text' /><br />
+<input name='adduser' type='submit' valur='register'/>
+</form>
+";
+mysql_close($connectdb);
+?>
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+عمل حذف لليوزر  DELETE
+او حذف البيانات
+نفس كود اليوزر مع بعض الاضافات
+<?
+include"config.php";
+/*CREATE TABLE  `user` (
+ `u_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ `u_name` VARCHAR( 255 ) NOT NULL ,
+ `u_pass` VARCHAR( 255 ) NOT NULL ,
+ `u_email` VARCHAR( 255 ) NOT NULL ,
+ `u_about` TEXT NOT NULL
+) ENGINE = MYISAM ;
+
+*/
+$id = intval($_GET['id']);
+if($_REQUEST['user'] == 'delete'){   //2
+$Udelete = mysql_query("DELETE FROM user WHERE u_id ='".$id."'") or die(mysql_error());
+if(isset($Udelete)){
+echo"<h3 style='color:green;'>User is Delete</h3>"; //2
+}
+}
+if($_REQUEST['user'] == 'edit'){
+$setU = mysql_query("SELECT * FROM user WHERE u_id ='".$id."'");
+$UQuery = mysql_fetch_object($setU);
+#====================[POST VALUE]======================#
+$u_name =$_POST['u_name'];
+$u_pass =$_POST['u_pass'];
+$u_email=$_POST['u_email'];
+$u_about=$_POST['u_about'];
+#====================[POST VALUE]======================#
+if(isset($_POST['edituser'])){
+$UpdateDb = mysql_query("UPDATE user SET
+u_name ='$u_name',
+u_pass ='$u_pass',
+u_email ='$u_email',
+u_about ='$u_about'
+WHERE u_id='".$id."'
+");
+if(isset($UpdateDb)){
+     echo"<h3 style='color:green;'>Update Db is Done</h3>";
+     }
+}
+echo"
+<form action='user.php?user=edit&id=".$id."' method='POST'>
+username : <input name='u_name' type='text'value='".$UQuery->u_name."' /><br />
+password : <input name='u_pass' type='text'value='".$UQuery->u_pass."' /><br />
+email    : <input name='u_email' type='text'value='".$UQuery->u_email."' /><br />
+about    : <input name='u_about' type='text' value='".$UQuery->u_about."'/><br />
+<input name='edituser' type='submit' value='Update'/>
+</form>
+";
+}
+echo"
+<table width='50%' border='1'>
+<tr>
+<td>User ID</td>
+<td>User Name</td>
+<td>User pass</td>
+<td>User Email</td>
+<td>User About</td>
+<td>User setting</td>
+</tr>
+";
+$selectDbUser =mysql_query("SELECT * FROM user");
+while($userf=mysql_fetch_assoc($selectDbUser)){
+echo"
+<tr>
+<td>".$userf['u_id']."</td>
+<td><a href='profile.php?id=".$userf['u_id']."'>".$userf['u_name']."</a></td>
+<td>".$userf['u_pass']."</td>
+<td>".$userf['u_email']."</td>
+<td>".$userf['u_about']."</td>
+<td><a href='user.php?user=edit&id=".$userf['u_id']."'>EDIT</a>
+<a href='user.php?user=delete&id=".$userf['u_id']."'>DELET</a></td> //1
+
+</tr>";
+}
+echo"
+</table>
+";
+mysql_free_result($selectDbUser);
+mysql_close($connectdb);
+?>
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+معاملات المقارنة والمساوات
+نفس ملف اليوزر مع الاضافات اسفل
+$selectDbUser =mysql_query("SELECT * FROM user where u_id !=4");
+هنا اليوزر لا يظهر  لان لا يساوي
+يمكن استخدام الاشارات الاسفل
+or  =   <   >  <=   >= 
+-----------------------------------------------------------------------------------------
+AND    _ _ OR
+$selectDbUser =mysql_query("SELECT * FROM user where u_id='1' or u_id ='4'");
+اي يظهر او يجلب العناصر بين 1 و 4  الاعضاء
+-----------------------------------------------------------------------------------------
+Truncate
+افراغ الجداول
+حذف البيانات من قاعدة البيانات
+باستخدام الاكواد
+deletedb.php
+<?
+include'config.php';
+if(isset($_POST['Delete'])){
+   $TruncTa = mysql_query('TRUNCATE TABLE user') or die('NOT Trunc');
+   if(isset($TruncTa)){
+      echo'
+          <h3> Table is TRUNCTAE</h3>
+      ';
+   }
+}
+echo'
+    <form action="delete.php" method="POST">
+	<input name="Delete" type="submit" value="Delete Table Content"/>
+	</form>
+';
+?>
+-----------------------------------------------------------------------------------------
+افراغ الجداول
+حذف البيانات من قاعدة البيانات
+من النتصفح
+localhost
+mywebsite
+user
+check all
+X   or  DELETE
+-----------------------------------------------------------------------------------------
+انشاء وحذف قاعدة البيانات
+عن طريق دوال php
+Create_delete_Db.php
+<?
+$datab = $_POST['database'];
+if(isset($_POST['Create'])){
+   $Connect = mysql_Connect("localhost","root","root") or die(mysql_error());
+   if(isset($Connect)){
+   $DB = mysql_query("CREATE DATABASE $datab") or die(mysql_error());
+   if(isset($DB)){
+   
+      echo"
+          <h3> Db is Created</h3>
+      ";
+	  }
+   }
+}
+if(isset($_POST['Delete'])){
+   $Connect = mysql_Connect("localhost","root","root") or die(mysql_error());
+   if(isset($Connect)){
+   $DB = mysql_query("DROP DATABASE $datab") or die(mysql_error());
+   if(isset($DB)){
+    echo"
+          <h3> Db is Delete</h3>
+      ";
+	  }
+   }
+}
+echo'
+    <form action="Create_delete_Db.php" method="POST">
+	<input name="database" type="text"/><br />
+	<input name="Create" type="submit" value="Create new Db"/><br />
+	<input name="Delete" type="submit" value="Delete Db"/><br />
+	</form>
+';
+?>
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+طريقتن لكتابة table 
+ تختلف في العرض
+<table border='1' width='100%'>
+   <tr>
+      <td width='20%'><b>".$FetchN->n_title."</b></td>
+      <td>".$FetchN->n_subject."</td>
+   </tr>
+</table>
+ ---------or------
+ <table border='1' width='50%'>
+   <tr>
+      <td><b>".$FetchN->n_title."</b></td>
+      
+   </tr>
+   <tr>
+   <td>".$FetchN->n_subject."</td>
+   </tr>
+</table>
+-----------------------------------------------------------------------------------------
+ملاحظات
+md5  تشفير الكود تستخدم مع الباسورد
+$p = md5($_POST['password']);
+
+strip_tags  لمنع اكواد html  للحماية من الاخنراق
+$u = strip_tags($_POST['username']);
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+

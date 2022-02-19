@@ -1,0 +1,271 @@
+﻿PHP & Mysql
+
+ **Mysqli**
+
+عمل اتصال بقاعدة البيانات
+Connect with Database
+
+<?php
+
+$hostname = "localhost";   # اسم الهوست الذي نتصل بة
+$username = "ali";         # اسم المستخدم
+$password = "12345";       # الرقم السري
+
+$conn = mysqli_connect($hostname,$username,$password);
+
+if(!$conn){
+  Die("Connection failed: ". mysqli_connect_error());
+ }else{
+  echo "Connected";
+  }
+?>
+
+----------------------
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345";       
+
+$conn = mysqli_connect($hostname,$username,$password);
+
+if($conn){
+  echo "Connected";
+ }else{
+  die("Connection failed: ". mysqli_connect_error()."<br> <br>" ."Error NO: " .mysqli_connect_error());
+  }
+?>
+----
+Or die("Error NO: " .mysqli_connect_error());
+--------------------
+opp connected
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345";       
+
+$conn = new mysqli($hostname,$username,$password);
+
+if($conn->connect_error){
+	die("Connection failed: ". $conn->connect_error);
+ }else{
+    echo "Connected";
+ 
+  }
+?>
+----------------
+connrct with db
+الاتصال مع قاعدة البيانات
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "blog";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}else{
+	echo"Connected";
+}
+?>
+<?php
+mysqli_close($conn);
+?>
+-------------------
+Read From Database
+القراء من قاعدت البيانات
+
+
+
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "blog";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}else{
+	//echo"Connected";
+}
+$query= "SELECT * FROM `progremmers` WHERE 1";
+$result= mysqli_query($conn,$query);
+
+if (mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+	echo"id:".$row["id"].""."-Name:".$row["name"].
+		"".$row["lastname"]."".$row["description"].
+		"".$row["created"]."".$row["age"].
+		"".$row["created_at"]."".$row["updated_at"]."<br>";
+	}
+}else{
+	echo"No records";
+}
+
+mysqli_close($conn);
+?>
+
+--
+---OR---
+while($row = mysqli_fetch_row($result)){
+			echo"id:".$row[0].""."-Name:".$row[1].
+		"".$row[2]."".$row[3].
+		"".$row[4]."".$row[5].
+		"".$row[6]."".$row[7]."<br>";
+
+--
+او يمكن استخدام array
+بدل من row & assoc
+while($row = mysqli_fetch_array($result)){
+$row[0]  or  $row["name"]
+--
+-or-
+		echo"id:".$row["id"]."<br>"."-Name:".$row["name"].
+		"<br>".$row["lastname"]."<br>".$row["description"].
+		"<br>".$row["created"]."<br>".$row["age"].
+		"<br>".$row["created_at"]."<br>".$row["updated_at"]."<br>";
+
+-------------
+or 
+
+هنا تم القراء والكتابة من قواعد البيانات
+
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "blog";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}else{
+	//echo"Connected";
+}
+$query= "SELECT * FROM `progremmers` WHERE 1";
+$result= mysqli_query($conn,$query);
+
+if (mysqli_num_rows($result)>0){
+	while($row = mysqli_fetch_assoc($result)){
+		echo"id: ".$row["id"]."-Name:".$row["name"].
+		""." - lastname : ".$row["lastname"].""." - description : ".$row["description"].
+		""." - created : ".$row["created"].""." - age : ".$row["age"].
+		""." - created_at : ".$row["created_at"].""." - updated_at : ".$row["updated_at"]."<br>";
+	}
+}else{
+	echo"No records";
+}
+
+mysqli_close($conn);
+?>
+------------------------------
+ادخال وتحديث وحذف  البيانات
+Insert From Database
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "test";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}
+
+
+
+$sql = "INSERT INTO `aa`(`name`,`department`,`salary`) VALUES ('AA','php',2005)";
+
+if(mysqli_query($conn,$sql)){
+	echo"New record created successfully";
+}else{
+	echo"Error:" .$sql."<br>".mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+-------
+or
+
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "test";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}
+
+$your_name = 'as';
+$your_department = 'he'; 
+$your_salary = 4000;
+
+$sql = "INSERT INTO `aa`(`name`,`department`,`salary`) VALUES ("
+."'" .$your_name."'". "," ."'".$your_department."'". "," .$your_salary.")";
+
+//echo $sql; //للتاكد فقط
+
+if(mysqli_query($conn,$sql)){
+	echo"New record created successfully";
+}else{
+	echo"Error:" .$sql."<br>".mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+-----------------------------
+or
+<?php
+
+$hostname = "localhost";   
+$username = "ali";         
+$password = "12345"; 
+$dbname = "test";
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
+
+if(!$conn){
+	die("Connecttion failed: " .mysqli_connect_error());
+}
+
+$your_name = 'as';
+$your_department = 'he'; 
+$your_salary = 4000;
+
+$sql = "INSERT INTO `aa`(`name`,`department`,`salary`) VALUES ("
+."'" .$your_name."'". "," ."'".$your_department."'". "," .$your_salary.")";
+
+//echo $sql; //للتاكد فقط
+
+if(mysqli_query($conn,$sql)){
+	echo"New record created successfully";
+}else{
+	echo"Error:" .$sql."<br>".mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+
+Error:INSERT INTO `aa`(`name`,`department`,`salary`) VALUES ('as','he',4000)
+Duplicate entry '0' for key 'PRIMARY'
+--------------------

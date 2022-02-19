@@ -1,0 +1,1780 @@
+﻿------------------------------------------------------------------------
+java Script
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+مكان كتابة كود الجافا سكربت
+
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+		
+        <script type="text/javascript">
+		
+        </script>
+		
+    </head>
+    <body>
+
+    </body>
+</html> 
+نحفظ الملف باسم  text.html 
+ داخل السيرفر المحلي
+ نعمل ملف داخل السيرفر 
+ javascript
+------------------------------------------------------------------------
+ملاحظات 
+يمكن حفظ ملف العمل في اي مكان 
+------------------------------------------------------------------------
+ممكن ان تضع اكود الجافا داخل head or body
+------------------------------------------------------------------------
+ممكن ايضا صنع ملف خارجي
+app.js
+ووضع الاكواد بة
+--
+app.js ملف
+document.write("aaa");
+--
+index.html ملف
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+    </body>
+</html
+--
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+app.js ملف
+document.write("Wellcom");
+function m(){
+    alert("انت في الصفحة الخطى");
+    }
+--
+index.html ملف
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+<button onclick="m()">click me</button>
+    </body>
+</html
+------------------------------------------------------------------------
+// 
+or
+ 
+/* 
+any  
+*/
+
+ليقاف الكود او عمل ملاحظات
+------------------------------------------------------------------------
+document.write   جملة الطباعة 
+مثل عمل echo في php 
+ وبداخل الاقوس المحتوى المراد طباعته
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        document.write("Wellcom");
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+------------------------------------------------------------------------
+Return to editing
+
+alert
+تستخدم في التحذير
+كما في جملة الطباعة اسفل 
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        alert("انت في الصفحة الخطى");
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+------------------------------------------------------------------------
+المتغيرات
+var
+
+app.js
+
+var x=2;
+var y=2;
+var z=x+y;
+
+document.write(z);
+
+------------------------------------------------------------------------
+المتغير الداخل if
+فقط if له الحق بالتصرف بة
+
+if(1>2) {
+ var x2=44;
+}
+document.write(x2 +y);
+يظهر فقط قمة y
+
+كذللك
+المتغرات الداخل
+الفاكشن
+
+function m(){
+ xx=4;
+    alert("انت في الصفحة الخطى");
+    }
+------------------------------------------------------------------------
+ex
+function m(){
+ xx=4;
+    alert("انت في الصفحة الخطى");
+    }
+
+if(1>2) {
+ var x2=44;
+}
+
+var d=x2+xx;
+document.write(d);
+no sol لا يوجد حل فارغ
+------------------------------------------------------------------------
+ولاكن اذا تم تعريف المتغرات خارج الفاكشن و if
+يمكن استخدامهم 
+var x=1;
+vary=1;
+
+function m(){
+ x=4;
+    alert("انت في الصفحة الخطى");
+    }
+
+if(1>2) {
+  y=44;
+}
+بدون تعريف المتغرات داخل fun &if
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var student ="Ali";  // يمكن وضع اي اسم بدل student
+
+            document.write(student); //هنا نكتب اسم المتغير داخل الاقواس ليتم طباعة المحتوى Ali
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+document.write("student is : " + student); في هذه الحالة سيتم طباعة كما في اسفل
+student is Ali
+
+document.write("student is : " + student + "Good");    ايضا
+student is Ali Good
+عند رفع + من الكود لا يظهر شي اي تكون الصفحة فارغة    
+------------------------------------------------------------------------
+العمليات على المتغيرات
+
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var text1 =10;
+        var text2 =5;
+
+           var plus =text1 + text2;
+
+            document.write(plus);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+او يمكن استخدام الطريقة اسفل بدل الاعلى
+document.write(text1 + text2); 
+يمكن اي عملية بدل + مثل - / * %    
+x++ زيادة بواحد
+x-- نقصان بواحد
+
+=== متساوين في القيمه والنوع
+== متساوين في القيمه فقط
+!= لايساوي
+!== لايساوي نوع وقيمه
+>اكبر
+>= اكبر او يساوي
+< اصغر
+<=
+------------------------------------------------------------------------
+if(1==1){
+  document.write("equal");
+}
+or if(1=="1")  equal
+or if(1<2)  equal
+------------------------------------------------------------------------
+if(1==2){
+  document.write("equal");
+}else{
+document.write("not equal");
+}
+or if(1==="1")  not equal
+
+& and
+| or
+^ xor
+~ not
+<< left shift
+>> right shift
+>>> zero-fill right shift
+
+if(1==1 & 2==2){
+  document.write("true");
+}else{
+document.write("false");
+}
+
+if((~2) & ==2)
+if(1 << 2)
+if(1==1 && 2==2)
+if(1==1 || 2==2)
+if(!(1==2))
+------------------------------------------------------------------------
+var x,y;
+x=1;
+y=1;
+
+x=x+y;
+or
+x+=y;
+document.write(x);
+------------------------------------------------------------------------
+var nu=1;
+if(nu %2 ==0){
+  document.write("even");
+}else{
+document.write("odd");
+}
+------------------------------------------------------------------------
+if(nu==1){
+  document.write("nu 1");
+}else if(nu ==2){
+document.write("nu2");
+}else{
+document.write("no 1 or 2");
+}
+--------
+
+------------------------------------------------------------------------
+المصفوفة Array
+1D
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        // this is array 0      1       1   index
+
+        var student = ["ali","ahmed","mohammed"];
+            document.write(student[1]);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+هنا يطبع احمد اي حسب index
+عند وضع الارقام بدل الكلمات لان نضع فوارز اي
+[3232,"fdsf",3]
+------------------------------------------------------------------------
+المصفوفة Array
+2D
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        // this is array        0                         1          index  x
+		
+        //                0       1       2          0      1    2   index  y
+        var student = [["ali","ahmed","mohammed"],["you","Iam","we"]];
+		
+		                           x  y
+            document.write(student[1][0]);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+هنا استخدمنا مصفوفتين 
+سيتم طباعة you
+اي 1 من المصفوفة الرئيسسة 0 من المصفوفة الداخلية
+------------------------------------------------------------------------
+var myname =["ali","abbas","moh"]; //تعريف المصفوفه
+
+for (var index =0;index <3; index++){
+    var element = myname[index];
+    document.write(element);
+}
+or document.write(element+" ");
+------------------------------------------------------------------------
+var myname =["ali","abbas","moh"]; //تعريف المصفوفه
+
+for (var index =0;index < myname.length; index++){
+    var element = myname[index];
+    document.write(element+" ");
+}
+
+myname.length لا يحتاج الى تحديد عدد العناصر داخل المصفوفة 
+------------------------------------------------------------------------
+طريقة اخرى في تعريف المصفوفة  افضل  
+
+var myname = new Array();
+myname[0]="ali";
+myname[1]="abbas";
+myname[2]="moh";
+
+for (var index =0;index <myname.length; index++){
+    var element = myname[index];
+    document.write(element+" ");
+}
+------------------------------------------------------------------------
+طريقة اخرى في تعريف المصفوفة
+
+var myname = new Array("ali","abbas","moh");
+
+for (var index =0;index <myname.length; index++){
+    var element = myname[index];
+    document.write(element+" ");
+}
+------------------------------------------------------------------------
+Number
+
+var x=3;
+var x1=2.7;
+var x2=123e3;
+var x3=new Number(2);
+
+document.write(x +"<br> ");
+document.write(x1 +"<br> ");
+document.write(x2 +"<br> ");
+document.write(x3 +"<br> ");
+
+123e3; تمثل 3 اصفار بعد e
+------------------------------------------------------------------------
+var x1=2.7;
+var x2=123e3;
+var x3=new Number(2);
+
+x2.toString();  // لتحويل الى string
+x5 = x1.toFixed(2);  // يتخدم للتحويل الى عشري
+document.write(x1 +"<br> ");
+document.write(x2 +"<br> ");
+document.write(x5 +"<br> ");
+------------------------------------------------------------------------
+x5 = x1.toPrecision(2);
+x5 = x1.toExponential(2);
+
+document.write(typeof(x2) +"<br> ");
+sol streng
+document.write(typeof(x3) +"<br> ");
+sol object
+document.write(typeof(x) +"<br> ");
+sol number
+------------------------------------------------------------------------
+object string
+
+var x="ali';  تعريف بالطرية العاية
+var xx=new String("ab");  بطريقة object
+
+document.write(x +"<br> ");
+document.write(xx +"<br> ");
+------------------------------------------------------------------------
+document.write(x.charAt(2) +"<br> "); 
+يظهر الحرف الثاني
+------------------------------------------------------------------------
+var x="ali";
+var xx=new String("ab");
+var fulln = x.concat(xx); عمل ربط الجملتين معن
+
+document.write(fulln +"<br> ");
+------------------------------------------------------------------------
+var x="ali is my first name";
+document.write(x.indexOf("first") +"<br> ");
+البحث عن كلمة رقم index is 10
+------------------------------------------------------------------------
+document.write(x.lastIndexOf("first") +"<br> ");
+------------------------------------------------------------------------
+document.write(x.toLocaleUpperCase() +"<br> ");
+يطبع الجمله حروف كبيرة
+------------------------------------------------------------------------
+document.write(x.toLocaleLowerCase() +"<br> ");
+صغيرة
+------------------------------------------------------------------------
+document.write(x.slice(1,4) +"<br> "); 
+تجزء الحروف  sol  li  من1 الى 4
+------------------------------------------------------------------------
+document.write(x.trim() +"<br> ");
+يمسح المسافات في البداية والنهاية
+------------------------------------------------------------------------
+Math 
+
+var x= 4;
+
+var x2 = Math.sqrt(x)
+
+document.write(x2 +"<br> ");
+الجذر التربيعي
+------------------------------------------------------------------------
+var x2 = Math.random() 
+يعطي ارقام عشوائية بين 0   والواحد
+------------------------------------------------------------------------
+var x2 = Math.pow(2,4) 
+تربيع
+------------------------------------------------------------------------
+var x2 = Math.floor(2.4)
+يقرب الى الاقل
+------------------------------------------------------------------------
+var x2 = Math.ceil(2.4)
+يقرب الى الاكبر
+------------------------------------------------------------------------
+var x2 = Math.round(2.4)
+التقريب حسب قوانيين الرياضيات
+------------------------------------------------------------------------
+var x2 = Math.abs(2)
+القيمة المطلقة
+------------------------------------------------------------------------
+boolean
+
+document.write(10 < 1); false
+document.write(10 > 1); true
+------------------------------------------------------------------------
+Object Date التاريخ والوقت
+
+var myday = new Date();
+
+document.write(myday);
+
+sol
+Tue Nov 07 2017 14:41:50 GMT+0300 (Arabic Standard Time) 
+------------------------------------------------------------------------
+var myday = new Date();
+
+var myD = myday.getDate();
+var myM = myday.getMonth();
+var myY = myday.getFullYear();
+
+document.write(myday +" "+myM+" "+myY+"");
+
+Tue Nov 07 2017 14:47:03 GMT+0300 (Arabic Standard Time) 10 2017 
+---------------------or ***
+var myday = new Date();
+
+var myD = myday.getDate();
+var myM = myday.getMonth()+1;  //***
+var myY = myday.getFullYear();
+
+document.write(myday +"<br> "+myM+"<br> "+myY+"");
+------------------------------------------------------------------------
+var myH = myday.getHours();
+var myM = myday.getMinutes();
+var myS = myday.getSeconds();
+------------------------------------------------------------------------
+    var myday = new Date();
+    var myh = myday.getHours();
+    var mym = myday.getMinutes();
+    var mys = myday.getSeconds();
+
+    mym = checkTime(mym);
+    mys = checkTime(mys);
+
+
+function checkTime(x){
+if (x<10){
+    x = "0"+x;
+}
+return x;
+}    
+document.write(myh +": "+mym+": "+mys+"");
+عمل ساعة
+------------------------------------------------------------------------
+function watch(){
+    var myday = new Date();
+    var myh = myday.getHours();
+    var mym = myday.getMinutes();
+    var mys = myday.getSeconds();
+
+    mym = checkTime(mym);
+    mys = checkTime(mys);
+    document.write(myh +": "+mym+":"+mys+"");
+}
+
+function checkTime(x){
+if (x<10){
+    x = "0"+x;
+}
+return x;
+}    
+watch()
+عمل ساعة باستخدام الفاكشن
+------------------------------------------------------------------------
+    <body>
+  <p id="myp"></p>
+    </body>
+
+function watch(){
+    var myday = new Date();
+    var myh = myday.getHours();
+    var mym = myday.getMinutes();
+    var mys = myday.getSeconds();
+
+    mym = checkTime(mym);
+    mys = checkTime(mys);
+    document.getElementById("myp").innerHTML = myh +": "+mym+": "+mys;
+    setTimeout( function (){
+        watch();
+    }, 1000); // كل ثانية يتغيير
+}
+
+function checkTime(x){
+if (x<10){
+    x = "0"+x;
+}
+return x;
+}  
+window.onload = function myLoaded(){
+    watch();
+}  
+
+عمل ساعة تتغير بدوا عمل refresh للمتصفح
+------------------------------------------------------------------------
+BOM
+يجعل المتصفح يتفاعل مع الوندوز
+مثلا
+window.alert("ali")
+نفس
+alert("ali")
+------------------------------------------------------------------------
+window.confirm("ali")
+ايضا  نعم او لا
+------------------------------------------------------------------------
+window.prompt("ali")
+يسألك ادخل شي
+------------------------------------------------------------------------
+window.open("ali")
+------------------------------------------------------------------------
+window.close("ali")
+------------------------------------------------------------------------
+<button onclick="x()">click me</button>
+
+
+function x(){
+    var status = window.confirm("choose one")
+      if (status){
+         alert("True")
+      }else{
+         alert("False")
+      }
+}
+
+عند الضغط على نعم يظهر true
+كلا false
+------------------------------------------------------------------------
+ممكن ايضا
+ ادخل اسمك
+function x(){
+    var status = window.prompt("place your name")
+         alert(status)
+}
+------------------------------------------------------------------------
+
+function x(){
+  window.open("https://www.google.iq")
+
+}
+------------------------------------------------------------------------
+
+function x(){
+  window.setTimeout(function(){
+      window.alert("welcome to");
+  },2000); //بعد 2 ثانية
+
+}
+------------------------------------------------------------------------
+
+function x(){
+  window.history.back();
+
+}
+يظهر الصفحة السابقة التي تم استخدامها
+------------------------------------------------------------------------
+function x(){
+  window.history.back();
+  window.history.forward(); // الرجوع
+  window.history.go(2); // تقدم صفحتين
+  window.history.go(-2); // رجوع 2
+}
+------------------------------------------------------------------------
+
+function x(){
+
+    document.write("<br>appCodeName"+window.navigator.appCodeName);
+    document.write("<br>appName"+window.navigator.appName);
+    document.write("<br>appVersion"+window.navigator.appVersion);
+    document.write("<br>language"+window.navigator.language);
+    document.write("<br>cookieEnabled"+window.navigator.cookieEnabled);
+    document.write("<br>onLine"+window.navigator.onLine);
+    document.write("<br>platform"+window.navigator.platform);
+
+}
+يظهر مواصفات المتصفح
+------------------------------------------------------------------------
+
+function x(){
+
+    document.write("<br>width :"+window.screen.width);
+    document.write("<br>height :"+window.screen.height);
+    document.write("<br>colorDepth :"+window.screen.colorDepth);
+    document.write("<br>pixelDepth :"+window.screen.pixelDepth);
+    document.write("<br>availHeight :"+window.screen.availHeight);
+    document.write("<br>availWidth :"+window.screen.availWidth);
+
+}
+يظهر معلوات عن المتصفح
+------------------------------------------------------------------------
+DOM
+هو html document
+
+By  ID
+
+<body>
+        <p id="myp"></p>
+  <button onclick="x()">click me</button>
+</body>
+
+function x(){
+
+document.getElementById("myp").innerHTML = "ali ab moh";
+
+
+}
+------------------------------------------------------------------------
+    <body>
+        <p id="myp"></p>
+        <input type="text" id="myInput">
+  <button onclick="x()">click me</button>
+    </body>
+
+
+function x(){
+
+    document.getElementById("myInput").value = "ali ab moh";
+}
+عند الضغط على كلك يظهر داخل input
+------------------------------------------------------------------------
+        <p id="myp"></p>
+        <input type="text" id="myInput">
+        <textarea type="text" id="mytext"></textarea>
+  <button onclick="x()">click me</button>
+
+function x(){
+
+    document.getElementById("myInput").value = "ali ab moh";
+    document.getElementById("mytext").value = "AAAAAAAA";
+    
+}
+------------------------------------------------------------------------
+ملاحظة
+div & p  تكون
+innerHTML
+عكس البقية
+------------------------------------------------------------------------
+        <p type="text" id="myInput"></p>
+        <textarea type="text" id="mytext"></textarea>
+  <button onclick="x()">click me</button>
+
+function x(){
+    var x=1;
+    var x2=2;
+    var s=x+x2;
+
+    document.getElementById("myInput").innerHTML = s
+    document.getElementById("mytext").value = s
+    
+}
+
+فكرتة تجلبة عن طريق id
+وتدخلة في الجافا سكربت وتقوم مثلا بالعمليات الحسابية الخ
+------------------------------------------------------------------------
+DOM
+
+BY Name
+
+        <p id="myp"></p>
+        <div id="mydd"></div>
+        <br>
+        <input type="text" name="myInput">
+        <input type="text" name="myInput2">
+
+  <button onclick="x()">click me</button>
+
+
+function x(){
+   var n= document.getElementsByName("myInput")[0].value;
+   var n2 = document.getElementsByName("myInput2")[0].value;
+   sum = n +n2;  
+   document.getElementById("myp").innerHTML = sum
+}
+or
+sum = n.concat(n2);  
+ندخل قيم في الخانات
+هنا يجمع عل شكل نص وليس ارقام
+------------------------------------------------------------------------
+لتحويل الى ارقام
+هنا يجمع ارقام وليس نصوص
+function x(){
+   var n= parseInt(document.getElementsByName("myInput")[0].value);
+   var n2 = parseInt(document.getElementsByName("myInput2")[0].value);
+   sum = n +n2;  
+   document.getElementById("myp").innerHTML = sum
+}
+------------------------------------------------------------------------
+DOM 
+<  tag name
+
+        <p id="myp"></p>
+        <div id="mydd"></div>
+        <br>
+        <input type="text" name="myInput">    
+  <button onclick="x()">click me</button>
+
+
+function x(){
+   var sum = document.getElementsByTagName("INPUT")[0].value;
+   document.getElementById("myp").innerHTML = sum
+}
+
+------------------------------------------------------------------------
+        <p id="myp"></p>
+        <div id="mydd"></div>
+        <br>
+        <input type="text" name="myInput">
+        <textarea type="text" id="mytext"></textarea>
+
+  <button onclick="x()">click me</button>
+
+function x(){
+   var sum = document.getElementsByTagName("INPUT")[0].value;
+   var sum2 = document.getElementsByTagName("TEXTAREA")[0].value;
+   document.getElementById("myp").innerHTML = sum+sum2
+}
+على شكل نصوص
+------------------------------------------------------------------------
+function x(){
+   var sum = parseInt(document.getElementsByTagName("INPUT")[0].value);
+   var sum2 = parseInt(document.getElementsByTagName("TEXTAREA")[0].value);
+   document.getElementById("myp").innerHTML = sum+sum2
+}
+يجمع على شكل ارقام
+------------------------------------------------------------------------
+DOM
+صنع اشياء Dynamic in html
+innerhtml
+
+
+    <body>
+        <p id="myp"></p>
+        <form>
+                <button onclick="x()" type="button">create form</button>
+                <div id="myd"></div>
+        </form>
+
+    </body>
+-
+
+
+function x(){
+    var myForm =" <input type='text' name='myInput'> "+
+    "<input type='text' name='myInput1'> <br>"+
+     
+    "<textarea type='text' id='mytext'></textarea> "; 
+    document.getElementById("myd").innerHTML = myForm   
+}
+صنع بوتوم عند الضغط على انشاء
+------------------------------------------------------------------------
+innertext
+
+    <body>
+        <p id="myp"></p>
+        <form name="myForm">
+                <input type="text" name="myInput" onkeyup="x()"> 
+                <input type="text" name="myInput1"> 
+                <br>
+                <textarea type="text" id="mytext"></textarea> 
+                <button onclick="" type="button">create form</button>
+                <div id="myd"></div>
+        </form>
+--
+
+function x(){
+   var mymessage ;
+   if (document.myForm.myInput.value.length > 8){ // اكبر من 8 
+       mymessage = "thanks"  // اذا ادخل ا8 اوكثر
+   }else{
+       mymessage = "too bad" // اذا ادخل اقل من 8
+   }
+    document.getElementById("myd").innerText = mymessage   
+}
+
+
+onkeyup="" منادات فاكشن معين
+------------------------------------------------------------------------
+المصفوفة الترابطية
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var student = [];
+            student["stud1"] = "ali";
+            student["stud2"] = "ahmed";
+            student["stud3"] = "mohammed";
+            document.write(student["stud3"]);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+هنا يتم طباعة محمد
+فرق هذه المصفوفة عن الاعلى الاولى الاستدعاء عن طريق الارقام الثانية  عن طريق الاسماء       
+------------------------------------------------------------------------
+الشروط condition_if_else_elseif
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var test = 100;
+
+        if(test == 10){
+         
+         document.write("True");
+
+        }else{
+            document.write("Fals");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var test = 100;
+
+        if(test == 10){
+         
+         document.write("True");
+
+        }else if(test == 20){
+
+            document.write("values is 20");
+        }else{
+
+            document.write("Fals");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+ //if(الشرط) //{المحتوي};
+------------------------------------------------------------------------
+معاملات المقارنة والمساوات ولا مساوات
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+
+        if(number == 100){
+       
+
+            document.write("number is" +  number);
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+في حالة المساوات 
+------------------------------------------------------------------------
+في حالة لا مساوات
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+
+        if(number != 100){
+       
+
+            document.write("Success");
+
+        }else{
+            alert("false");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+اذا كان number 
+لا يساوي 100 يطبع 
+false
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 10;
+
+        if(number != 100){
+       
+
+            document.write("Success");
+
+        }else{
+            alert("false");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+هنا المتغير يساوي 10
+اذا كان number 
+لايساوي 100 يطبع success
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+
+        if(number > 55){
+       
+
+            document.write("Success");
+
+        }else{
+            alert("false");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+هنا اذا كان 10<100 يطبع 
+Success
+ايضا يمكن استخدام  <  <=  >  >=  ==  !=                       
+------------------------------------------------------------------------
+AND   OR
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+        var name = "ali";
+
+        if(number ==100){
+            document.write("True");
+        }else if(name == "ali"){
+            document.write("True")
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+في هذه الحالة اذا تحقق الشريط يطبع True
+دون الاعتماد على الشرط الثانية
+--
+اذا لم يتحقق الشرط الاول يذهب الى الشرط الثاني
+----على شرح -----
+اسفل تطبيق
+AND
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+        var name = "ali";
+
+        if(number ==100 && name == "ali"){
+            document.write("True");
+        }else{
+            document.write("false")
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+اذا كان الاسم الرقم == يطبع true
+اذا اختلف احدهما يطبع false
+------------------------------------------------------------------------
+OR<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       
+
+        var number = 100;
+        var name = "ali";
+
+        if(number ==10 || name == "ali"){
+            document.write("True");
+        }else{
+            alert("false")
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+هنا اذا تحقق احد الشرطين يطبع true
+-----
+اذا لم يتحقق الشرطين معا يطبع false
+------------------------------------------------------------------------
+switch  التبديل
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var string = "ali";
+
+       switch(string){
+
+           case "ali":
+                document.write("welcom ali");
+                break;
+           case "mohammed":
+                document.write("welcom mohammed");
+                break;
+            
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+------------------------------------------------------------------------
+var day="sun";
+var result;
+switch (day){
+   case "sun":
+   result ="sun";
+      break;
+   case "mon":
+   result ="mon";
+      break;
+   case "tu":
+   result ="tu";
+      break;  
+   default:
+   result ="its not days";
+      break;
+}  
+document.write(result) ; 
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var string = "ali";
+
+       switch(string){
+
+           case "ahmed":
+                document.write("welcom")
+                break;
+           case "mohammed":
+                document.write("welcom")
+                break;
+
+                default:
+                document.write("Error")
+            
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+هنا يطبع Error
+القيمة الافتراضية
+لان string غير موجود
+------------------------------------------------------------------------
+نلاحظ ان switch نفس عمل if كما في المثال الاسفل
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var string = "ali";
+
+       if(string == "ali"){
+
+                document.write("welcom ali")
+        }else if(string == "mohammed"){        
+                document.write("welcom mohammed")
+                
+        }else{
+                
+                document.write("Error")
+            
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>        
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var string = "ali";
+
+       switch(string){
+
+           case "ali":
+           case "ahmed":
+           case "mohammed":
+                document.write("welcom user")
+                break;
+            
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+هنا اذا تحقق اي من الشروط يطبع welcom
+اختصار الحالات
+------------------------------------------------------------------------
+for_loop_التكرارية
+
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var user = 20;
+
+       for(user =1 ;user <= 20;user ++){
+
+                document.write(user)
+                
+            
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+يطبع 1234567891011121314151617181920
+لجعل الطباعة عمودية نضيف 
+اسفل جملة  document.write(user)
+document.write("<br />")
+------------------------------------------------------------------------
+for
+
+for(var i=0 ; i<10; i++){
+document.write("ali <br />")
+}
+or
+document.write(i+"ali <br />")
++ لربط شيأين
+
+document.write(i+1 +"ali <br />")
+document.write(i +" - "+"ali <br />")
+
+------------------------------------------------------------------------
+while
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+       var user = 1;
+
+      while(user <20){
+        document.write(user++)
+        document.write("<br />")
+      }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+------------------------------------------------------------------------
+var x=10;
+while (x<20){
+document.write(x +" <br />);
+x++;
+}
+----
+do  while
+
+var x=10;
+do {
+document.write(x +" <br />);
+x++;
+} while(x< 20);
+
+------------------------------------------------------------------------
+function الدوال
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+  //   اسم الداله   الدالة
+       function name (){
+
+        document.write("welcom")
+        
+      }
+	  // استدعاء  الدالة لكي يطبع مرحبا
+      name();
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+name اسم الداله يمكن وضع اي اسم بدل عنه 
+---------------او
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var abc;
+       function name (abc){
+
+        document.write(abc);
+        
+      }
+      name("welcom to");
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+------------------------------------------------------------------------
+function name (){
+   document.write("welcom");
+ }
+name() // منادات الفاكشن
+------------------------------------------------------------------------
+<button onclick="xname()">clickme</button>
+
+function xname (){
+   alert("aa");
+ }
+//xname()
+------------------------------------------------------------------------
+<button onclick="xname(33)">clickme</button>
+
+function xname (aa){
+    alert(aa);
+  }
+------------------------------------------------------------------------
+<button onclick="xname('ali','ab',25)">clickme</button>
+
+function xname (fname,lname,age){
+   alert(aa);
+ }
+or alert("my fname" +fname +"my lname"+lname+"my age is" +age );
+------------------------------------------------------------------------
+function myaddress(){
+    return "iraq"; // ارجاع قيمة
+}
+document.write(myaddress()); 
+------------------------------------------------------------------------
+function xsum(){
+    var x=1;
+    var y=1;
+    sum=x+y;
+    return sum;  // ارجاع قيمة
+}
+document.write(xsum()); 
+------------------------------------------------------------------------
+object
+
+person={name:"ali",lname:"ab",age:"25"
+}
+document.write(person.name);
+sol  ali 
+--
+document.write(person.name+" "+person.lname +" "+ person.age); 
+ali ab 25
+------------------------------------------------------------------------
+طريقة اخرى
+
+var cat = new Object();
+cat.name ="Cat";
+cat.age = "1";
+document.write(cat.name+"<br> "+cat.age);
+------------------------------------------------------------------------
+طريقة اخرى
+
+function mye(id,name,lname,age){
+    this.id=id;
+    this.name=name;
+    this.lname=lname;
+    this.age=age;
+}
+emp = new mye(1,"ali","ab",25);
+document.write(emp.id+emp.name+emp.lname+emp.age);
+------------------------------------------------------------------------
+باستخدام function
+
+
+function person(id,name,lname,age){
+    this.id=id;
+    this.name=name;
+    this.lname=lname;
+    this.age=age;
+
+    this.changePersonAge =changeAge;
+    function changeAge(params)
+     this.age = params;
+}
+myperson = new person(1,"ali","ab",25); //ممكن عمل اكثر من object
+myperson2 = new person(2,"ahmed","ab",20);
+myperson3 = new person(3,"muh","ab",23);
+document.write(myperson.id+" "+myperson.name+" "+myperson.lname +" "+ myperson.age);
+document.write("<br>");
+document.write(myperson2.id+" "+myperson2.name+" "+myperson2.lname +" "+ myperson2.age);
+document.write("<br>");
+document.write(myperson3.id+" "+myperson3.name+" "+myperson3.lname +" "+ myperson3.age);
+------------------------------------------------------------------------
+function person(id,name,lname,age){
+    this.id=id;
+    this.name=name;
+    this.lname=lname;
+    this.age=age;
+
+    this.changePersonAge =changeAge; // فاكشن تغيير العمر
+    function changeAge(params){
+     this.age = params; 
+    }     
+}
+myperson = new person(1,"ali","ab",25); //ممكن عمل اكثر من object
+myperson2 = new person(2,"ahmed","ab",20);
+myperson3 = new person(3,"muh","ab",23);
+
+myperson.changePersonAge(66); // لتغيير العمر
+document.write(myperson.age);
+---or---
+document.write(myperson.age+"<br>");
+myperson.changePersonAge(66);
+document.write(myperson.age);
+
+ممكن صنع فاكشن تغييز الاسم  .. الخ
+---
+استخدام فاكشن نوع void لاترجع قيمة
+
+function person(id,name,lname,age){
+    this.id=id;
+    this.name=name;
+    this.lname=lname;
+    this.age=age;
+
+    this.mymsg = myprint;
+
+    this.changePersonAge =changeAge; // فاكشن تغيير العمر
+    function changeAge(params){
+     this.age = params; 
+    }   
+    function myprint(){
+        document.write("just print this msg");  
+    } 
+}
+myperson = new person(1,"ali","ab",25); //ممكن عمل اكثر من object
+myperson2 = new person(2,"ahmed","ab",20);
+myperson3 = new person(3,"muh","ab",23);
+
+document.write(myperson.age+"<br>");
+myperson.changePersonAge(66);
+document.write(myperson.age);
+
+document.write("<br>");
+myperson.mymsg();
+----اخرى
+function person(id,name,lname,age){
+    this.id=id;
+    this.name=name;
+    this.lname=lname;
+    this.age=age;
+
+    this.mymsg = myprint;
+    this.mymsg2 = myprint2;
+    this.changePersonAge =changeAge; // فاكشن تغيير العمر
+    function changeAge(params){
+     this.age = params; 
+    }   
+    function myprint(){
+        document.write("just print this msg");  
+    } 
+    function myprint2(name){
+        document.write("my name is"+name);  
+    } 
+}
+myperson = new person(1,"ali","ab",25); //ممكن عمل اكثر من object
+myperson2 = new person(2,"ahmed","ab",20);
+myperson3 = new person(3,"muh","ab",23);
+
+document.write("<br>");
+myperson.mymsg();
+document.write("<br>");
+myperson.mymsg2("sam");
+-------------
+
+------------------------------------------------------------------------
+alert عبارة عن دالة 
+------------------------------------------------------------------------
+دالة التحقق
+confirm
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        confirm("Error");
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+نفس عمل دالة alert
+ولاكن في الدالة الولى يضهر فقط قبول ok
+اما في الثانية نعم او الغاء
+ok == true
+cancel ==false
+------------------------------------------------------------------------
+اضافات حول دالة confirm
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var conf = confirm("انت على وشك مغادرت الصفحة");
+
+        if(conf == true){
+            document.write("ok");
+        }else{
+          document.write("cancel");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+عند الضغط على 
+ok --ok
+cancel --cancel
+------------------------------------------------------------------------
+prompt دالة
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+        prompt("Add your name ","Ali");
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+عند التنفيذ يطبع لك
+add your name
+وتكون  
+ali القيمة الافتراضية
+--يمكن وضع اي جملة طباعة--
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var pp = prompt("Add your name ","Ali");
+
+        if(pp != null){
+            document.write("welcome :" + pp);
+        }else{
+          alert("الحقل فارغ");
+        }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+في هذه الحالة عند ادخال اسم في الحقل يطبعة مثل احمد
+يضهر لنا
+welcome : ahmed
+---
+!= null  
+اذا كان غير فارغ
+---
+------------------------------------------------------------------------
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+        var pp = prompt("Add your name ","Ali");
+
+        if(pp == ""){
+            document.write("Error");
+        }else{
+          document.write("welcome :" + pp);
+        }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html> 
+في هذة الحالة عند ادخل اسم يطبعة
+عند ترك الحقل فارغ يطبع خطأ error
+------------------------------------------------------------------------
+onClick الحدث
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+        <script type="text/javascript">
+
+      function myalert(){
+         alert("welcome");
+      }
+
+        </script>
+    </head>
+    <body>
+
+    <button onClick="myalert()">Click Here !!</button>    
+
+    </body>
+</html>
+عند الضغط على click here 
+يظهر لنا welcome 
+myalert دالة
+ايضا يستخدم مع الفورم form
+------------------------------------------------------------------------
+getElementById شرح
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+      
+    </head>
+    <body>
+
+    <div id="test">welcome</div>
+    <div id="comm">ali</div>
+
+     <script type="text/javascript">
+
+         document.getElementById('test');
+     </script>
+    </body>
+</html>
+1-نضع كود الجافا سكربت داخل body
+2-getElementById نقول للجافا سكربت ان يتم العمل على test or ali 
+------------------------------------------------------------------------
+innerText 
+مكمل لل getElementById
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+      
+    </head>
+    <body>
+
+    <div id="test">welcome</div>
+
+     <script type="text/javascript">
+
+     var ali = document.getElementById('test');
+
+         ali.innerText = "welcome ali";
+
+     </script>
+    </body>
+</html>
+innerText خاصة بالتعامل مع النصوص وطبع النصوص
+ملاحظة =innertext لا تعمل مع نصوص html
+ali.innerText = "<h2>welcome ali</h2>";
+هنا سيتم طبع وسوم html
+<h2>welcome ali</h2>
+ملاحظة هتا welcomeالداخل الديف لا تطبع وعند حذفها لايوثرة 
+------------------------------------------------------------------------
+innerHTML
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+      
+    </head>
+    <body>
+
+    <div id="test"></div>
+
+     <script type="text/javascript">
+
+     var ali = document.getElementById('test');
+
+         ali.innerHTML = "<h1>welcome ali</h1>";
+
+     </script>
+    </body>
+</html>
+innerHTML عكس الاول الاعلى هنا يتم تشغيل اكواد html 
+------------------------------------------------------------------------
+style خاصية
+<html>
+    <head>
+        <title>java script</title>
+        <meta chrset="UTF-8" />
+      
+    </head>
+    <body>
+
+    <h1 id="test">Hello , Ali</h1>
+
+     <script type="text/javascript">
+
+     var test = document.getElementById("test");
+
+         test.style.fontFamily = "tahoma";
+         test.style.background = "green";
+         test.style.color = "#ffffff";
+
+     </script>
+    </body>
+</html> 
+------------------------------------------------------------------------
+------------------------------------------------------------------------
